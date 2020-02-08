@@ -1,31 +1,36 @@
-## This can be your internal website page / project page
+## Oscars 2020 predictions
+These predictions aren't necesarily what I think will win it's what I want to win!
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### Best Picture
+- Ford v Ferrari (Producers Peter Chernin, Jenno Topping & James Mangold)
+- The Irishman (Producers Martin Scorsese, Robert De Niro, Jane Rosenthal & Emma Tillinger Koskoff)
+- Jojo Rabbit (Producers Carthew Neal & Taika Waititi)
+- Joker (Producers Todd Phillips, Bradley Cooper & Emma Tillinger Koskoff)
+- Little Women (Producer Amy Pascal)
+- Marriage Story (Producers Noah Baumbach & David Heyman)
+- 1917 (Producers Sam Mendes, Pippa Harris, Jayne-Ann Tenggren & Callum McDougall)
+- Once Upon A Time...In Hollywood (Producers David Heyman, Shannon McIntosh & Quentin Tarantino)
+- Parasite (Kwak Sin Ae & Bong Joon Ho)
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+**Parasite** - I thought this movie was phenominal and so refreshingly new.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+#### Best Director
+- Martin Scorsese - The Irishman
+- Todd Phillips - Joker
+- Sam Mendes - 1917
+- Quentin Tarantino - Once Upon A Time...In Hollywood
+- Bong Joon Ho - Parasite
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+#### Leading Actor
+- Antonio Banderas - Pain and Glory
+- Leonardo DiCaprio - Once Upon A Time...In Hollywood
+- Adam Driver - Marriage Story
+- Joaquin Phoenix - Joker
+- Jonathan Pryce - The Two Popes
 
-### 2. Assess assumptions on which statistical inference will be based
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 3. Support the selection of appropriate statistical tools and techniques
-
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Leading Actress
+- Cynthia Erivo - Harriet
+- Scarlett Johansson - Marriage Story
+- Saoirse Ronan - Little Women
+- Charlize Theron - Bombshell
+- Renee Zellweger - Judy
