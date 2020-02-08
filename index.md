@@ -2,20 +2,10 @@
 
 ---
 
-### Category Name 1 
+### Personal experiences
 
-[Oscars 2020](/sample_page)
+[Oscars 2020](/oscars_page.md)
 <img src="images/oscars.jpg?raw=true"/>
-
----
-
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
 
 ---
 
