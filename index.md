@@ -6,7 +6,7 @@
 
 [my resume](pdf/Phil_Fradkin_201910.pdf)
 
-### Personal experiences
+### Science
 <!-- 
 [Oscars 2020](/oscars_page.md)
 <img src="images/oscars.jpg?raw=true"/>
@@ -41,3 +41,8 @@ __I presented a poster at ISMB2018 on negative selection and unbiased benchmarki
         <p> <ul> Link to poster: This browser does not support PDFs. Please download the PDF to view it: <a href="images/ismb_poster.pdf">Download PDF</a>. </ul> </p>
     </embed>
 </object>
+
+
+#### Musings
+
+- [writing journey](/musings/writing_general.md)
