@@ -2,10 +2,7 @@
 
 ---
 
-### Resume:
-
-
-### Science
+## Science
 <!-- 
 [Oscars 2020](/oscars_page.md)
 <img src="images/oscars.jpg?raw=true"/>
@@ -44,6 +41,6 @@ __I presented a poster at ISMB2018 on negative selection and unbiased benchmarki
 ---
 
 
-### Musings
+## Musings
 
 - [writing journey](/musings/writing_general.md)
