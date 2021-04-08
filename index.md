@@ -4,7 +4,7 @@
 
 ## Science
 
-__I wrote a blog post for about the 2017 paper Deep Variational Information Bottleneck and connection between Information Theory and Deep Learning__
+__Blog post about the 2017 paper Deep Variational Information Bottleneck and connection between Information Theory and Deep Learning__
 
 <img src="images/vib.png?raw=true"/>
 
