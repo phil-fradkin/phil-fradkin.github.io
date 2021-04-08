@@ -3,10 +3,15 @@
 ---
 
 ## Science
-<!-- 
-[Oscars 2020](/oscars_page.md)
-<img src="images/oscars.jpg?raw=true"/>
- -->
+
+__I wrote a blog post for about the 2017 paper Deep Variational Information Bottleneck and connection between Information Theory and Deep Learning__
+
+<img src="images/vib.png?raw=true"/>
+
+[link to read](science/Variational_Information_Bottleneck.pdf)
+
+---
+
 
 __We wrote a paper elucidating the mechanism of pathogenicity of a variant which causes Wilson disease.__  
 * This pathogenic missense variant causes exon 6 skipping in ATP7B resulting in nonsense mediated decay. There is now an oligonucleotide treatment in development for remediating the variant effect!
