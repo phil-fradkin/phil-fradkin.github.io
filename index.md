@@ -30,7 +30,7 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
     <a href="https://open.spotify.com/episode/1aRzadwiHPS16DpUEdYlBb?si=4250cb59742f491c">
         <img src="./images/statistically_insignificant.jpg" alt="Image Alt Text" />
         <h3>February 2020: Podcast</h3>
-        <p>We recorded a podcast with my friend Erik Drysdal covering advancements in genomics over the last 20 years, state of predictive system in molecular biology, and a little bit of personal history!</p>
+        <p>We recorded a podcast with my friend Erik Drysdale covering advancements in genomics over the last 20 years, state of predictive system in molecular biology, and a little bit of personal history!</p>
     </a>
 </div>
 
