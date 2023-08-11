@@ -8,7 +8,7 @@ title: Home
 I’m a PhD student at the university of Toronto working to create advances at the intersection of machine learning and genomics. I am passionate about the subject because the consequences of discovery are so significant - biology is all around us and yet we understand so little of it.
 
 Prior to starting my PhD I worked as a computational biologist at
-Deep Genomcs where I worked on translating foundational research in machine learning and genomics into pre-clinical applications.
+Deep Genomics where I worked on translating foundational research in machine learning and genomics into pre-clinical applications.
 
 My PhD projects are in the areas of self-supervised contrastive training, and data efficient learning for biological sequences. I am broadly curious and would love to discuss new and ongoing projects.
 
@@ -16,7 +16,7 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
 --- 
 --- 
 
-## Scince Communication
+## Science Communication
 
 <div class="link-container">
     <a href="./science/concerto_2022.html">
@@ -34,7 +34,7 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
     </a>
 </div>
 
-## Science Timeline
+## Timeline
 
 
 <div class="link-container">
@@ -88,6 +88,6 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
     <a href="/things_im_reading.html">
         <img src="./images/reading.jpg" alt="Image Alt Text" />
         <h3>Things I'm Reading</h3>
-        <p>A collection of articles, books, and papers I'm currently reading.</p>
+        <p>Amidst all the science and progress I think it's important to remain a functional human being so I try to read things from time to time. Here is a list of thing I've recently read for posterity.</p>
     </a>
 </div>
