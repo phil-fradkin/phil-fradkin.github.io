@@ -1,0 +1,56 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y7WYDM9DP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9Y7WYDM9DP');
+</script>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <div class="entry">
+                <h1 class="name">Philip Fradkin</h1>
+            </div>
+            <div class="profile-photo">
+                <img src="/images/Phil.jpg" alt="Your Photo" class="profile-photo">
+            </div>
+            <div class="entry">
+                <a href="mailto:phil.fradkin@gmail.com" target="_blank" class="social-link"><i class="fa fa-envelope"
+                        aria-hidden="true"></i> phil.fradkin@gmail.com</a>
+            </div>
+            <div class="entry">
+                <a href="https://www.linkedin.com/in/philip-fradkin-330a417b/" target="_blank" class="social-link"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="entry">
+                <a href="https://twitter.com/phil_fradkin" target="_blank" class="social-link"><i
+                        class="fab fa-twitter"></i> Twitter</a>
+            </div>
+            <div class="entry">
+                <a href="/pdf/Philip_Fradkin_2023_CV.pdf" target="_blank" class="social-link"><i
+                        class="fas fa-file-alt"></i>
+                    Resume</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="text-content">
+                {{content}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

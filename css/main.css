@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    animation: fadein .5s;
+    background-color: #1B1B1B;
+    color: #E5E5E5;
+    font-family: 'Georgia', serif;
+    /* Example font */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.split-screen {
+    display: flex;
+}
+
+.left {
+    width: 30%;
+    /* Add additional styling for the left side here */
+    padding: 20px;
+    /* Adds some space around the content */
+    background-color: #A8C6DB;
+    border-radius: 10px;
+    /* Rounded corners */
+    color: #333333;
+    /* Text color for the left panel */
+}
+
+.text-content {
+    max-width: 600px;
+    /* Maximum width for the text content */
+    margin: 0 auto;
+    /* Centers the text content horizontally */
+    padding: 20px;
+    /* Padding around the text */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.5;
+    /* Line height for readability */
+    color: #E5E5E5;
+    /* Text color */
+}
+
+.right {
+    width: 70%;
+    overflow-y: scroll;
+    /* Enables vertical scrolling */
+    height: 100vh;
+    /* Sets the height to the full viewport height */
+    /* Add additional styling for the right side here */
+    padding: 20px;
+    /* Adds some space around the content */
+    background-color: #414A62;
+    border-radius: 5px;
+    /* Rounded corners */
+    color: #E5E5E5;
+    /* Text color for the right panel */
+}
+
+.default_background {
+    width: 100%;
+    overflow-y: scroll;
+    /* Enables vertical scrolling */
+    height: 100vh;
+    /* Sets the height to the full viewport height */
+    /* Add additional styling for the right side here */
+    padding: 20px;
+    /* Adds some space around the content */
+    background-color: #414A62;
+    border-radius: 5px;
+    /* Rounded corners */
+    color: #E5E5E5;
+    /* Text color for the right panel */
+}
+
+.link-container {
+    width: 100%;
+    max-width: 550px;
+    /* Constant width for the entire container */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.link-container img {
+    width: 150px;
+    /* Constant width for the image */
+    height: auto;
+    /* Maintains aspect ratio */
+    margin-right: 10px;
+}
+
+.large-image {
+    width: 500px;
+    /* Larger width */
+    height: auto;
+    /* Maintains aspect ratio */
+    margin-bottom: 20px;
+}
+
+.link-container h3,
+.link-container p {
+    margin: 0;
+    padding: 5px;
+    /* Spacing between header and paragraph */
+}
+
+.link-container h3 {
+    margin-bottom: 5px;
+    /* Spacing between header and paragraph */
+}
+
+.link-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    flex-wrap: wrap;
+    /* Allows wrapping if there isn't enough space */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .link-container a {
+        flex-direction: column;
+        /* Stacks image, header, and paragraph vertically */
+    }
+
+    .link-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Spacing between image and text */
+    }
+}
+
+.profile-photo {
+    width: 100%;
+    /* Takes up the full width of the container */
+    height: auto;
+    /* Automatically calculated based on the original aspect ratio */
+    display: block;
+    /* Ensures that the image is treated as a block-level element */
+    max-width: 100%;
+    /* Ensures that the image never exceeds the width of its container */
+    border-radius: 10%;
+    /* Makes the image circular */
+    /* border: 1px solid #1B1B1B; */
+    /* Thick border, adjust thickness and color as needed */
+    margin: 0 auto 30px;
+    /* Centers the image horizontally and sets a bottom margin of 30px */
+    max-width: 350px;
+    /* Sets a maximum width of 200 pixels for the image */
+    align-items: center;
+}
+
+.about-section {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.social-link {
+    display: block;
+    color: #333333;
+    /* Text color, adjust as needed */
+    text-decoration: none;
+    /* Removes underline */
+    margin-left: 30px;
+    margin-bottom: 10px;
+    /* Spacing between links */
+    font-size: clamp(8px, 1.8vw, 18px);
+    /* Adjusts the font size based on 2% of the viewport width */
+    /* Adjust font size as needed */
+    text-align: left;
+    /* Centers the text within the links */
+}
+
+.social-link:hover {
+    text-decoration: underline;
+    /* Underline on hover for visual feedback */
+}
+
+.name {
+    font-size: clamp(20px, 2vw, 28px);
+    /* Adjust font size as needed */
+    margin-bottom: 10px;
+    margin-left: 30px;
+    /* Spacing between name and email */
+    color: #333333;
+    /* Text color, adjust as needed */
+}
+
+.email {
+    display: block;
+    color: #333333;
+    /* Text color, adjust as needed */
+    text-decoration: none;
+    /* Removes underline */
+    margin-bottom: 20px;
+    /* Spacing between email and other links */
+    font-size: 16px;
+    /* Adjust font size as needed */
+}
+
+.email:hover {
+    text-decoration: underline;
+    /* Underline on hover for visual feedback */
+}
+
+.entry {
+    margin-bottom: 20px;
+    /* Spacing between entries, adjust as needed */
+}
+
+a img {
+    margin-right: 10px;
+    /* Spacing between image and link text */
+    vertical-align: middle;
+    /* Aligns image with link text */
+    /* Other styling as needed */
+    width: 30%;
+    border-radius: 10px;
+}
+
+.link-symbol {
+    margin-right: 10px;
+    /* Spacing between symbol and content */
+}

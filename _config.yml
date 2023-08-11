@@ -1,0 +1,9 @@
+title: Philip Fradkin # your name (or website title) here
+logo: "/images/Phil.jpg?raw=true" # your photo (or logo) here
+email: phil.fradkin@gmail.com
+description: # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: phil_fradkin
+github_username:  phil-fradkin
+linked_in: https://www.linkedin.com/in/philip-fradkin-330a417b/
