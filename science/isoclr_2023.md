@@ -25,6 +25,15 @@ a:active {
 }
 </style>
 
+<!-- <style>
+    .content-container {
+        max-width: 700px;  /* Adjust as needed */
+        margin: 0 auto;   /* This centers the content if the viewport is wider than max-width */
+    }
+</style>
+
+<div class="content-container">  -->
+
 ## IsoCLR: Splicing up your predictions with RNA contrastive learning
 
 <div class="link-container">
@@ -37,7 +46,7 @@ a:active {
 
 
 <div style="text-align: center;">
-    <img src="../images/IsoClr_Figure_3.2 copy.png" style="max-width: 550px; height: auto; margin: 0 10px;">
+    <img src="../images/IsoClr_Figure_3.2 copy.png" style="max-width: 700px; height: auto; margin: 0 10px;">
 </div>
 
 
@@ -67,8 +76,8 @@ In our work, we build on this concept by applying it to mature RNA transcript se
 ### So does it work?
 
 <div style="text-align: center;">
-    <img src="../images/human_hl.png" style="max-width: 330px; height: auto; margin: 0 10px;">
-    <img src="../images/human_mrl.png" style="max-width: 330px; height: auto; margin: 0 10px;">
+    <img src="../images/human_hl.png" style="max-width: 450px; height: auto; margin: 0 10px;">
+    <img src="../images/human_mrl.png" style="max-width: 450px; height: auto; margin: 0 10px;">
 </div>
 
 Yes! We evaluated the model on two RNA regulatory processes that regulate protein production: RNA half-life and mean ribosome load. We focused our evaluation on linear probing to compare the quality of the representation against other self-supervised methods. We find that IsoCLR consistently outperformed methods that use a reconstruction objective like masked language modeling and next token prediction. We evaluate against a variety of methods that were trained on human and genomes of other species.
@@ -76,17 +85,17 @@ Yes! We evaluated the model on two RNA regulatory processes that regulate protei
 In addition, we found that pre-training improved performance in the low data regime. We hypothesized that this is because IsoCLR learns meaningful latent representations, simplifying the supervised training on the downstream task.
 
 <div style="text-align: center;">
-    <img src="../images/gen_10_fine_tune_by_fraction_pearson copy.png" style="max-width: 220px; height: auto; margin: 0 10px;">
-    <img src="../images/gen_10_fine_tune_by_fraction_MSE%20copy.png" style="max-width: 220px; height: auto; margin: 0 10px;">
+    <img src="../images/gen_10_fine_tune_by_fraction_pearson copy.png" style="max-width: 320px; height: auto; margin: 0 10px;">
+    <img src="../images/gen_10_fine_tune_by_fraction_MSE%20copy.png" style="max-width: 320px; height: auto; margin: 0 10px;">
 </div>
 
 To validate that the latent representations learn semantically meaningful information, we perform dimensionality reduction on the latent space. Below is a t-sne of the latent representation across RNA sequences corresponding to different gene ontologies. IsoCLR was never trained on GO terms and learns GO stratification as an indirect result of our training objective. To validate that we are not just picking up spurious spatial features, we perform linear probing experiments on top 10 most common GO labels from the Molecular Function GO tree (from a single hierarchical level).
 
  
 <div style="text-align: center;">
-    <img src="../images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
-    <img src="../images/BiologicalProcess_t_sne_top_3_go_root_terms_10 copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
-    <img src="../images/MolecularFunction_t_sne_top_3_go_root_terms_10%20copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
+    <img src="../images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png" style="max-width: 210px; height: auto; margin: 0 10px;">
+    <img src="../images/BiologicalProcess_t_sne_top_3_go_root_terms_10 copy.png" style="max-width: 210px; height: auto; margin: 0 10px;">
+    <img src="../images/MolecularFunction_t_sne_top_3_go_root_terms_10%20copy.png" style="max-width: 210px; height: auto; margin: 0 10px;">
 </div>
 
 

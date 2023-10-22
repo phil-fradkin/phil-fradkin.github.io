@@ -19,6 +19,15 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
 ## Science Communication
 
 <div class="link-container">
+    <a href="./science/isoclr_2023.html">
+        <img src="./images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png" alt="Image Alt Text" />
+        <h3>October 2023: IsoCLR</h3>
+        <p>This is a small explainer on IsoCLR or Splicing Up Your Predictions with RNA Contrastive Learning!</p>
+    </a>
+</div>
+
+
+<div class="link-container">
     <a href="./science/concerto_2022.html">
         <img src="./images/concerto.jpeg" alt="Image Alt Text" />
         <h3>June 2022: Concerto</h3>
