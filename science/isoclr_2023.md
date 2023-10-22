@@ -2,16 +2,36 @@
 layout: default
 title: IsoCLR
 ---
+<style>
+a:link {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
 
 ## IsoCLR: Splicing up your predictions with RNA contrastive learning
 
 
-<div class="large-image">
-    <div style="text-align: center;">
-        <a href="https://arxiv.org/abs/2310.08738">
-            <img src="../images/IsoClr_Figure_3.2 copy.png" alt="Image Alt Text" class="medium-image" style="max-width: 800px; height: auto; margin: 0 10px;">
-        </a>
-    </div>
+<div style="text-align: center;">
+    <a href="https://arxiv.org/abs/2310.08738">
+        <img src="../images/IsoClr_Figure_3.2 copy.png" alt="Image Alt Text" class="medium-image" style="max-width: 800px; height: auto; margin: 0 10px;">
+    </a>
 </div>
 
 
@@ -48,8 +68,8 @@ In our work, we build on this concept by applying it to mature RNA transcript se
 ### So does it work?
 
 <div style="text-align: center;">
-    <img src="../images/human_hl.png" style="max-width: 500px; height: auto; margin: 0 10px;">
-    <img src="../images/human_mrl.png" style="max-width: 500px; height: auto; margin: 0 10px;">
+    <img src="../images/human_hl.png" style="max-width: 340; height: auto; margin: 0 10px;">
+    <img src="../images/human_mrl.png" style="max-width: 340; height: auto; margin: 0 10px;">
 </div>
 
 Yes! We evaluated the model on two RNA regulatory processes that regulate protein production: RNA half-life and mean ribosome load. We focused our evaluation on linear probing to compare the quality of the representation against other self-supervised methods. We find that IsoCLR consistently outperformed methods that use a reconstruction objective like masked language modeling and next token prediction. We evaluate against a variety of methods that were trained on human and genomes of other species.
@@ -65,9 +85,9 @@ To validate that the latent representations learn semantically meaningful inform
 
  
 <div style="text-align: center;">
-    <img src="../images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png" style="max-width: 300px; height: auto; margin: 0 10px;">
-    <img src="../images/BiologicalProcess_t_sne_top_3_go_root_terms_10 copy.png" style="max-width: 300px; height: auto; margin: 0 10px;">
-    <img src="../images/MolecularFunction_t_sne_top_3_go_root_terms_10%20copy.png" style="max-width: 300px; height: auto; margin: 0 10px;">
+    <img src="../images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
+    <img src="../images/BiologicalProcess_t_sne_top_3_go_root_terms_10 copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
+    <img src="../images/MolecularFunction_t_sne_top_3_go_root_terms_10%20copy.png" style="max-width: 200px; height: auto; margin: 0 10px;">
 </div>
 
 

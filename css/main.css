@@ -39,7 +39,7 @@ body {
 }
 
 .text-content {
-    max-width: 600px;
+    max-width: 700px;
     /* Maximum width for the text content */
     margin: 0 auto;
     /* Centers the text content horizontally */
@@ -132,7 +132,7 @@ body {
 }
 
 /* Media Query for Smaller Screens */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .link-container a {
         flex-direction: column;
         /* Stacks image, header, and paragraph vertically */
