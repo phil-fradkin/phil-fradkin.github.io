@@ -4,15 +4,15 @@ body {
 
 body {
     opacity: 1;
-    transition: opacity .5s ease-in-out;
-    animation: fadein .5s;
+    /* transition: opacity .5s ease-in-out; */
+    /* animation: fadein .5s; */
     background-color: #1B1B1B;
     color: #E5E5E5;
     font-family: 'Georgia', serif;
     /* Example font */
 }
 
-@keyframes fadein {
+/* @keyframes fadein {
     from {
         opacity: 0;
     }
@@ -21,7 +21,7 @@ body {
         opacity: 1;
     }
 }
-
+ */
 .split-screen {
     display: flex;
 }
@@ -62,7 +62,7 @@ body {
     /* Add additional styling for the right side here */
     padding: 20px;
     /* Adds some space around the content */
-    background-color: #414A62;
+    background-color: #343b4f;
     border-radius: 5px;
     /* Rounded corners */
     color: #E5E5E5;
@@ -78,7 +78,7 @@ body {
     /* Add additional styling for the right side here */
     padding: 20px;
     /* Adds some space around the content */
-    background-color: #414A62;
+    background-color: #343b4f;
     border-radius: 5px;
     /* Rounded corners */
     color: #E5E5E5;
