@@ -27,14 +27,6 @@ a:active {
 
 ## IsoCLR: Splicing up your predictions with RNA contrastive learning
 
-
-<div style="text-align: center;">
-    <a href="https://arxiv.org/abs/2310.08738">
-        <img src="../images/IsoClr_Figure_3.2 copy.png" alt="Image Alt Text" class="medium-image" style="max-width: 800px; height: auto; margin: 0 10px;">
-    </a>
-</div>
-
-
 <div class="link-container">
     <span class="link-symbol">🔗</span>
     <a href="https://arxiv.org/abs/2310.08738">
@@ -42,6 +34,13 @@ a:active {
         <p></p>
     </a>
 </div>
+
+
+<div style="text-align: center;">
+    <img src="../images/IsoClr_Figure_3.2 copy.png" style="max-width: 550px; height: auto; margin: 0 10px;">
+</div>
+
+
 <!-- 
 <div class="link-container">
     <span class="link-symbol">🔗</span>
@@ -77,8 +76,8 @@ Yes! We evaluated the model on two RNA regulatory processes that regulate protei
 In addition, we found that pre-training improved performance in the low data regime. We hypothesized that this is because IsoCLR learns meaningful latent representations, simplifying the supervised training on the downstream task.
 
 <div style="text-align: center;">
-    <img src="../images/gen_10_fine_tune_by_fraction_pearson copy.png" style="max-width: 300px; height: auto; margin: 0 10px;">
-    <img src="../images/gen_10_fine_tune_by_fraction_MSE%20copy.png" style="max-width: 300px; height: auto; margin: 0 10px;">
+    <img src="../images/gen_10_fine_tune_by_fraction_pearson copy.png" style="max-width: 250px; height: auto; margin: 0 10px;">
+    <img src="../images/gen_10_fine_tune_by_fraction_MSE%20copy.png" style="max-width: 250px; height: auto; margin: 0 10px;">
 </div>
 
 To validate that the latent representations learn semantically meaningful information, we perform dimensionality reduction on the latent space. Below is a t-sne of the latent representation across RNA sequences corresponding to different gene ontologies. IsoCLR was never trained on GO terms and learns GO stratification as an indirect result of our training objective. To validate that we are not just picking up spurious spatial features, we perform linear probing experiments on top 10 most common GO labels from the Molecular Function GO tree (from a single hierarchical level).
