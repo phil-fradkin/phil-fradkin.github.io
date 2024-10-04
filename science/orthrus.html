@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Orthrus: A novel RNA foundation model pre-trained using contrastive learning to capture functional and evolutionary similarities of RNA sequences.">
+  <meta property="og:title" content="Orthrus: Towards Evolutionary and Functional RNA Foundation Models"/>
+  <meta property="og:description" content="Orthrus introduces a contrastive learning approach to pre-train RNA foundation models using biological augmentations from splice isoforms and orthologous genes in multiple species."/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/orthrus_cleaned_up.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Orthrus: RNA Foundation Models for Evolution and Function"/>
+  <meta name="twitter:description" content="A contrastive learning RNA foundation model pre-trained to capture functional properties of RNA sequences."/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/orthrus_cleaned_up.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Contrastive Learning, Genomics, RNA Foundation Models, Alternative Splicing, Orthology, Self-Supervised Learning, Zoonomia Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Orthrus: Towards Evolutionary and Functional RNA Foundation Models</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Orthrus: Towards Evolutionary and Functional RNA Foundation Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://philechka.com/" target="_blank">Philip Fradkin</a><sup>1, 2, *</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.cs.toronto.edu/~ruiashi/" target="_blank">Ruian Shi</a><sup>1, 2, 3, *</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://karini925.github.io/" target="_blank">Keren Isaev</a><sup>4, 5</sup>,
+                  </span>
+                    <!-- Add a newline here -->
+                    <br>
+                  <span class="author-block">
+                    <a href="https://www.ece.utoronto.ca/people/frey-b/" target="_blank">Brendan Frey</a><sup>1, 2, 6</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.mskcc.org/research-areas/programs-centers/computational-biology" target="_blank">Quaid Morris</a><sup>3, ‡</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.ca/citations?user=DN3LoTEAAAAJ&hl=en" target="_blank">Leo J. Lee</a><sup>1, 6, ‡</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://vectorinstitute.ai/team/bo-wang/" target="_blank">Bo Wang</a><sup>1, 2, 7, ‡</sup>
+                  </span>
+                </div>
+    
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">1. Vector Institute, Ontario, Canada. <br>
+                          2. Computer Science, University of Toronto, Ontario, Canada. <br>
+                          3. Computational and Systems Biology Program, Sloan Kettering Institute, New York,
+                          United States.<br>
+                          4. New York Genome Center, New York, United States.<br>
+                          5. Systems Biology, Columbia University, New York, United States.<br>
+                          6. Electrical and Computer Engineering, University of Toronto, Ontario, Canada.<br>
+                          7. Peter Munk Cardiac Center, University Health Network, Ontario, Canada.</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>‡</sup>Indicates Equal Advising</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Hugging Face link -->
+                      <span class="link-block">
+                        <a href="https://huggingface.co/antichronology/orthrus" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          🤗
+                        </span>
+                        <span>Hugging Face</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In the face of rapidly accumulating genomic data, our understanding of the RNA regulatory code remains incomplete. Pre-trained genomic foundation models offer an avenue to adapt learned RNA representations to biological prediction tasks. However, existing genomic foundation models are trained using strategies borrowed from textual or visual domains, such as masked language modelling or next token prediction, that do not leverage biological domain knowledge. Here, we introduce Orthrus, a mamba based RNA foundation model pre-trained using a novel self-supervised contrastive learning objective with biological augmentations. Orthrus is trained by maximizing embedding similarity between curated pairs of RNA transcripts, where pairs are formed from splice isoforms of 10 model organisms and transcripts from orthologous genes in 400+ mammalian species from the Zoonomia Project. This training objective results in a latent representation that clusters RNA sequences with functional and evolutionary similarities. We find that the generalized mature RNA isoform representations learned by Orthrus significantly outperform existing genomic foundation models on five mRNA property prediction tasks, and requires only a fraction of fine-tuning data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/Orthrus_movie.m4v"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle">
+        We treat each RNA transcript in the pre-training dataset as a reference transcript. For each reference transcript, we identify sets of transcripts that are related through alternative splicing and orthology processes. These related transcripts are viewed as augmentations of the reference transcript under the contrastive learning framework. Each reference transcript can be associated to both splicing and orthology augmentation sets.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered" style="max-width: 800px; margin: 0 auto 20px;">
+        Select Orthrus Figures
+      </h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="has-text-centered">
+            <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 30px;">
+            <strong>1C.</strong> Orthrus evaluation consisting of linear probing, fine-tuning over a variety of mature RNA properties and visualizing the model latent space.
+          </h2>
+        </div>
+        <!-- Your image here -->
+        <img src="static/images/Orthrus_evaluation.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
+            <strong>2A.</strong> Benchmarking linear probing performance on RNA property prediction tasks for self-supervised genomic foundation models. Individual bars represent the performance of foundation model variants, which typically differ in parameter count and pre-training dataset. Error bars show 95% confidence intervals, constructed using 10 runs with randomized data splits. The grey dashed line indicates the performance of the fully supervised Saluki method trained with access to labels. 
+          </h2>
+        </div>
+        <!-- Your image here -->
+        <img src="static/images/Orthrus_linear_probing.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
+          <strong>2B.</strong> Plots evaluating the fine-tuning performance of Orthrus Base across varying data availability. Each dataset is subsampled to the indicated percentage, with the number of data points provided in brackets. Point estimates are plotted, averaged across three random seeds and random data splits.
+       </h2>
+        <!-- Your image here -->
+        <img src="static/images/Orthrus_fine_tuning.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
+          <strong>3A.</strong> Example of BCL2L1 isoforms, where apoptosis-inhibiting isoforms cluster together, while non-coding and apoptosis-inducing isoforms display low similarity. The clustering matrix, derived from Orthrus embedding similarities, is represented by the dendrogram. Boundaries highlight clusters with divergent transcript functions. 
+        </h2>
+        <!-- Your image here -->
+        <img src="static/images/BCL2L1_heatmap.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

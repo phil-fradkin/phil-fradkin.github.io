@@ -38,9 +38,29 @@ title: Things I'm Reading
     - I like that I don't have to learn new characters a bunch of them are there from the first book
     - I have a bit of a hard time keeping track of Jhugs, Trells, and Tlan Imass.
     - Being engrossed in these other world is really fun.
-
-
+- [2023/11] Memories of Ice by Steven Erikson 4/5
+- [2023/12] House of chains by Steven Erikson 5/5
+- [2024/02] Midnight Tides Steven Erikson 5/5
+- [2024/03] The Bone Hunters Steven Erikson 4/5
+    - I had a bit of a harder time getting to like the main character of 
+- [2024/04] Reaper's Gale by Steven Erikson 4/5
+- [2024/05] Toll The hounds by Steven Erikson 3/5
+- [2024/07] The Glass Castle 4/5 by Jeannette Walls
+- [2024/08] Outliers by Malcom Gladwell 3/5 
+    - Popular science is always iffy with me since I feel like a lot of these concepts get oversimplified and not enough nuance is communicated
+- [2024/09] Leviathan Wakes by James Corey 5/5
+    - Oh man I haven't experienced staying up late into the night since I lost track of time because I was reading in a long time. I really loved this book
+- [2024/09] Caliban's War
+    - It was pretty good I liked all the political drama but I am a bit too used to Steven Erikson's inaccessible sequels. Being able to jump straight in like a next episode in a series was strangely jarring
+- [2024/09] There is no antimemetics division by qntm 5/5
+    - Might have to add this to my all time favorites
+    - So many cool ideas and concepts here absolutely amazing. 
+    - I think that videogames are like time antimemes. All of a sudden you don't know where the time went and it makes it feel dangerous. 
+    - Avoiding thinking about hard problems that you are worried about are like antimemes. 
+- [2024/10]
 ## All time favorites
 
 - Moloch by Scott Alexander
 - Solaris by Stanislaw Lem
+- Unsong by Scott Alexander
+- There is no antimemetics division qntm
