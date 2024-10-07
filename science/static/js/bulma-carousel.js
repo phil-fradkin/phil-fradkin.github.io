@@ -1033,7 +1033,7 @@ var onMouseLeave = Symbol('onMouseLeave');
 
 var defaultOptions = {
 	autoplay: false,
-	autoplaySpeed: 3000
+	autoplaySpeed: 9000
 };
 
 var Autoplay = function (_EventEmitter) {
@@ -2319,11 +2319,11 @@ var defaultOptions = {
   infinite: false,
 
   effect: 'translate',
-  duration: 300,
+  duration: 500,
   timing: 'ease',
 
   autoplay: false,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 9000,
   pauseOnHover: true,
   breakpoints: [{
     changePoint: 480,

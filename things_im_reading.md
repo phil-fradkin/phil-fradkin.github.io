@@ -57,7 +57,7 @@ title: Things I'm Reading
     - So many cool ideas and concepts here absolutely amazing. 
     - I think that videogames are like time antimemes. All of a sudden you don't know where the time went and it makes it feel dangerous. 
     - Avoiding thinking about hard problems that you are worried about are like antimemes. 
-- [2024/10]
+
 ## All time favorites
 
 - Moloch by Scott Alexander

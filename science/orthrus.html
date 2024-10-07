@@ -52,6 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+            <img style="height: 110px; margin-right:-100px; float: left" src="static/images/orthrus_cleaned_up.png">
             <h1 class="title is-1 publication-title">Orthrus: Towards Evolutionary and Functional RNA Foundation Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -68,7 +69,7 @@
                     <a href="https://www.ece.utoronto.ca/people/frey-b/" target="_blank">Brendan Frey</a><sup>1, 2, 6</sup>,
                   </span>
                   <span class="author-block">
-                    <a href="https://www.mskcc.org/research-areas/programs-centers/computational-biology" target="_blank">Quaid Morris</a><sup>3, ‡</sup>,
+                    <a href="https://www.mskcc.org/research/ski/labs/quaid-morris" target="_blank">Quaid Morris</a><sup>3, ‡</sup>,
                   </span>
                   <span class="author-block">
                     <a href="https://scholar.google.ca/citations?user=DN3LoTEAAAAJ&hl=en" target="_blank">Leo J. Lee</a><sup>1, 6, ‡</sup>,
@@ -76,19 +77,18 @@
                   <span class="author-block">
                     <a href="https://vectorinstitute.ai/team/bo-wang/" target="_blank">Bo Wang</a><sup>1, 2, 7, ‡</sup>
                   </span>
-                </div>
-    
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">1. Vector Institute, Ontario, Canada. <br>
-                          2. Computer Science, University of Toronto, Ontario, Canada. <br>
-                          3. Computational and Systems Biology Program, Sloan Kettering Institute, New York,
-                          United States.<br>
-                          4. New York Genome Center, New York, United States.<br>
-                          5. Systems Biology, Columbia University, New York, United States.<br>
-                          6. Electrical and Computer Engineering, University of Toronto, Ontario, Canada.<br>
-                          7. Peter Munk Cardiac Center, University Health Network, Ontario, Canada.</span>
+            </div>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block">
+                          1. Vector Institute<img class="affiliation-icon" src="static/images/affiliation_icons/vector.jpg">
+                          2. DCS, University of Toronto<img class="affiliation-icon" src="static/images/affiliation_icons/uoft.svg">
+                          3. CSBP, Sloan Kettering Institute<img class="affiliation-icon" src="static/images/affiliation_icons/msk.png"><br>
+                          4. NY Genome Center <img class="affiliation-icon" src="static/images/affiliation_icons/nygc.jpg">
+                          5. Systems Biology, Columbia <img class="affiliation-icon" src="static/images/affiliation_icons/columbia.png"><br>
+                          6. ECE, University of Toronto<img class="affiliation-icon" src="static/images/affiliation_icons/uoft.svg">
+                          7. Peter Munk Cardiac Center <img class="affiliation-icon" src="static/images/affiliation_icons/uhn.jpg"></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                    <span class="eql-cntrb"><small><br><sup>‡</sup>Indicates Equal Advising</small></span>
+                    <span class="eql-cntrb"><small><sup>‡</sup>Indicates Equal Advising</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -150,9 +150,9 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified abstract">
           <p>
-            In the face of rapidly accumulating genomic data, our understanding of the RNA regulatory code remains incomplete. Pre-trained genomic foundation models offer an avenue to adapt learned RNA representations to biological prediction tasks. However, existing genomic foundation models are trained using strategies borrowed from textual or visual domains, such as masked language modelling or next token prediction, that do not leverage biological domain knowledge. Here, we introduce Orthrus, a mamba based RNA foundation model pre-trained using a novel self-supervised contrastive learning objective with biological augmentations. Orthrus is trained by maximizing embedding similarity between curated pairs of RNA transcripts, where pairs are formed from splice isoforms of 10 model organisms and transcripts from orthologous genes in 400+ mammalian species from the Zoonomia Project. This training objective results in a latent representation that clusters RNA sequences with functional and evolutionary similarities. We find that the generalized mature RNA isoform representations learned by Orthrus significantly outperform existing genomic foundation models on five mRNA property prediction tasks, and requires only a fraction of fine-tuning data.
+            In the face of rapidly accumulating genomic data, our understanding of the RNA regulatory code remains incomplete. Pre-trained genomic foundation models offer an avenue to adapt learned RNA representations to biological prediction tasks. However, existing genomic foundation models are trained using strategies borrowed from textual or visual domains, such as masked language modelling or next token prediction, that do not leverage biological domain knowledge. Here, we introduce Orthrus, a Mamba based RNA foundation model pre-trained using a novel self-supervised contrastive learning objective with biological augmentations. Orthrus is trained by maximizing embedding similarity between curated pairs of RNA transcripts, where pairs are formed from splice isoforms of 10 model organisms and transcripts from orthologous genes in 400+ mammalian species from the Zoonomia Project. This training objective results in a latent representation that clusters RNA sequences with functional and evolutionary similarities. We find that the generalized mature RNA isoform representations learned by Orthrus significantly outperform existing genomic foundation models on five mRNA property prediction tasks, and requires only a fraction of fine-tuning data.
           </p>
         </div>
       </div>
@@ -161,70 +161,223 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Teaser video-->
-<section class="hero teaser">
+<section class="section hero">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/Orthrus_movie.m4v"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle">
-        We treat each RNA transcript in the pre-training dataset as a reference transcript. For each reference transcript, we identify sets of transcripts that are related through alternative splicing and orthology processes. These related transcripts are viewed as augmentations of the reference transcript under the contrastive learning framework. Each reference transcript can be associated to both splicing and orthology augmentation sets.
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-justified">Towards Biologically Inspired Genomic FMs</h2>
+        <div class="content has-text-justified">
+          <p>
+            Many recently released genomic foundation models (FMs) have demonstrated the
+            promise of self-supervised deep learning for DNA and RNA representation.
+            Leveraging the ever-increasing amount of sequencing data and architectural advancements,
+            genomic FMs aim to model the complex regulatory code governing the central dogma.
+            Successful genomic FMs offer low cost, data-efficient prediction of many biological processes,
+            unlocking potential advances in biological discovery and drug design.
+          </p>
+          <p>
+            Despite promising early results, we argue that the self-supervised
+            training objectives commonly used by existing genomic FMs
+            (i.e. next token prediction and masked language modelling) are ill-equipped to
+            handle the unique characteristics of genomic sequences. Recent estimates have shown
+            that most nucleotide positions are not under evolutionary constraint, meaning mutations to
+            the nucleotide would not impact fitness. Pre-training a genomic FM by reconstructing
+            these nucleotides essentially conditions it to predict noise, resulting in a poor representations
+            for several relevant downstream tasks. In our work, we tackle this challenge, designing a
+            biologically inspired self-supervised objective that we used to train a powerful new RNA
+            foundation model.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-justified">Orthrus: An RNA foundation model</h2>
+        <div class="content has-text-justified">
+          <p>We're excited to introduce Orthrus, an RNA foundation model trained using the Mamba architecture using a novel, biologically inspired contrastive learning objective that captures over 870 million interactions between over 49 million unique RNA transcripts. Orthrus offers strong performance when tasked to predict RNA properties such as RNA stability, localization, and translational efficiency. We find that fitting even linear models on Orthrus embeddings yields performance that approaches task-specific supervised models. Orthrus is also highly data efficient, achieving high accuracy in comparison to supervised approaches when fine-tuning using as few as 45 data samples. The code and weights for Orthrus can be found at: <a href="https://huggingface.co/antichronology/orthrus">HF weights</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="section hero teaser">
+  <div class="container is-max-desktop"></div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <div class="hero-body">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/Orthrus_movie.m4v"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle">
+            We treat each RNA transcript in the pre-training dataset as a reference transcript. For each reference transcript, we identify sets of transcripts that are related through alternative splicing and orthology processes. These related transcripts are viewed as augmentations of the reference transcript under the contrastive learning framework. Each reference transcript can be associated to both splicing and orthology augmentation sets.
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
+<section class="section hero"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-justified">Orthrus' Contrastive Loss</h2>
+        <div class="content">
+          <img width=75% src="static/images/Orthrus_loss.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>Orthrus is trained using contrastive learning, constructs a representation space for RNA transcripts by maximizing embedding similarity between an arbitrary transcript and a randomly sampled related transcript, while minimizing the similarity between all unrelated transcripts. We construct our contrastive dataset with a simple hypothesis: RNA transcripts related through alternative splicing and orthologous processes should be closer in latent space than those that are not. To this end, we collect these positive pair interactions using splicing annotations from GENCODE and RefSeq, and ortholog alignments from the <a href="https://www.science.org/doi/abs/10.1126/science.abn3107?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">Zoonomia Project</a>. In all, we obtain 870 million relationships that are used as positive pairs for contrastive learning. The Orthrus model is trained using the <a href=https://arxiv.org/abs/2110.06848>DCL Loss</a> on the mean pooled representations of RNA transcripts that are encoded using the Mamba architecture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section hero"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-justified">RNA Property and Function Prediction</h2>
+        <div class="content">
+          <img width=75% src="static/images/Orthrus_tasks.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>The Orthrus foundation model efficiently represents mature RNA transcripts. We demonstrate that through linear probing and fine-tuning of downstream tasks including RNA half-life, mean ribosome load, protein localization, and gene ontology classification. We find that when we perform linear probing, Orthrus outperforms matches or outperforms supervised models designed specifically for RNA property prediction such as <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x"> Saluki</a>. This indicates that by just fitting a linear model on trained Orthrus embeddings it's possible to achieve tuned DNN performance. </p>
+          <p>Benchmarking linear probing performance on RNA property prediction tasks for self-supervised genomic foundation models. Individual bars represent the performance of foundation model variants, which typically differ in parameter count and pre-training dataset. Error bars show 95% confidence intervals, constructed using 10 runs with randomized data splits. The grey dashed line indicates the performance of the fully supervised Saluki method trained with access to labels. </p>
+          <div class="content is-centered has-text-centered">
+            <img width=100% src="static/images/Orthrus_linear_probing.png" alt="MY ALT TEXT"/>
+          </div>
+
+          <!-- <p>Outline of TODO:</p>
+            <ul>
+              <li>Mature RNA is important for drug discovery. Post transcriptional regulation controls things such as the stability of mRNA vaccines, and ?
+              <li>Orthrus is evaluated on the following tasks + 2 sentence summary, then images
+              <li>Using the following experimental setups: LP and FT
+            </ul>
+
+            </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title has-text-centered" style="max-width: 800px; margin: 0 auto 20px;">
-        Select Orthrus Figures
+        Select Additional Orthrus Results
       </h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <div class="has-text-centered">
-            <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 30px;">
+            <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 80px;">
             <strong>1C.</strong> Orthrus evaluation consisting of linear probing, fine-tuning over a variety of mature RNA properties and visualizing the model latent space.
           </h2>
         </div>
         <!-- Your image here -->
-        <img src="static/images/Orthrus_evaluation.png" alt="MY ALT TEXT"/>
+        <div class="has-text-centered">
+          <img width=75% src="static/images/Orthrus_evaluation.png" alt="MY ALT TEXT"/>
+        </div>
       </div>
       <div class="item">
         <div class="has-text-centered">
           <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
-            <strong>2A.</strong> Benchmarking linear probing performance on RNA property prediction tasks for self-supervised genomic foundation models. Individual bars represent the performance of foundation model variants, which typically differ in parameter count and pre-training dataset. Error bars show 95% confidence intervals, constructed using 10 runs with randomized data splits. The grey dashed line indicates the performance of the fully supervised Saluki method trained with access to labels. 
+            <strong>Appendix 1.</strong> Dimensionality reduction of Orthrus embedding space using a UMAP. Each point in the Figure corresponds to a transcript and is colored depending on the biochemical property of interest. We observe clear separation of transcripts conditioned on the GC% CDS length, number of exons, and transcript length. This ensures that information regarding important biochemical properties is preserved in the model embeddings even after the length pooling operation. 
           </h2>
         </div>
         <!-- Your image here -->
-        <img src="static/images/Orthrus_linear_probing.png" alt="MY ALT TEXT"/>
+        <div class="has-text-centered">
+          <img width=55% src="static/images/biochem_prop.png" alt="MY ALT TEXT"/>
+        </div>
       </div>
       <div class="item">
         <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
           <strong>2B.</strong> Plots evaluating the fine-tuning performance of Orthrus Base across varying data availability. Each dataset is subsampled to the indicated percentage, with the number of data points provided in brackets. Point estimates are plotted, averaged across three random seeds and random data splits.
        </h2>
         <!-- Your image here -->
-        <img src="static/images/Orthrus_fine_tuning.png" alt="MY ALT TEXT"/>
+        <div class="has-text-centered">
+          <img width=65% src="static/images/Orthrus_fine_tuning.png" alt="MY ALT TEXT"/>
+        </div>
       </div>
       <div class="item">
         <h2 class="subtitle" style="width: 850px; margin: 0 auto; overflow-y: auto; text-align: left; padding-bottom: 20px;">
           <strong>3A.</strong> Example of BCL2L1 isoforms, where apoptosis-inhibiting isoforms cluster together, while non-coding and apoptosis-inducing isoforms display low similarity. The clustering matrix, derived from Orthrus embedding similarities, is represented by the dendrogram. Boundaries highlight clusters with divergent transcript functions. 
         </h2>
         <!-- Your image here -->
-        <img src="static/images/BCL2L1_heatmap.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+        <div class="has-text-centered">
+          <img width=75% src="static/images/BCL2L1_heatmap.png" alt="MY ALT TEXT"/>
+        </div>
       </div>
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
+
+<section class="section hero"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-justified">Conclusions</h2>
+        <div class="content has-text-justified">
+          <p> 
+            We hope that Orthrus, trained with an alternative self-supervised objective, will inspire other researchers to further innovate on inductive biases that can be specifically helpful for genomic sequence modeling. Whether it is a unique, constraint-aware tokenization procedure or an alternative masking methodology, we believe there is ample space for innovation. A significant amount of information can be learned by looking at evolutionarily related sequences, which is our aim in this work. We believe that this loss can be combined with reconstruction-based losses such as MLM to further enhance the quality of the learned representations, improve RNA property prediction, and open up the door for generative capabilities. Improving RNA property prediction and representation quality has significant implications for therapeutic and diagnostic domains. We're only just beginning to uncover the role of mRNA in cellular function and its potential as a therapeutic modality.
+          </p>
+        
+          <!-- <p>Outline of TODO:</p>
+            <ul>
+              <li>Mature RNA is important for drug discovery. Post transcriptional regulation controls things such as the stability of mRNA vaccines, and ?
+              <li>Orthrus is evaluated on the following tasks + 2 sentence summary, then images
+              <li>Using the following experimental setups: LP and FT
+            </ul> -->
+            <!-- </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DMKuZl1EuP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
 
 <!--BibTex citation -->

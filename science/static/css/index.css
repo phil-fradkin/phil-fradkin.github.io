@@ -133,5 +133,12 @@ body {
   font-size: smaller;
 }
 
+.affiliation-icon {
+  height: 28px;
+  vertical-align: bottom;
+}
 
+.abstract {
+  font-size: 14px;
+}
 
