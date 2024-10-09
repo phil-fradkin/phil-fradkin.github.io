@@ -43,6 +43,17 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y7WYDM9DP"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-9Y7WYDM9DP');
+  </script>
+
 </head>
 <body>
 
@@ -85,7 +96,7 @@
                           4. NY Genome Center <img class="affiliation-icon" src="static/images/affiliation_icons/nygc.jpg">
                           5. Systems Biology, Columbia <img class="affiliation-icon" src="static/images/affiliation_icons/columbia.png"><br>
                           6. ECE, University of Toronto<img class="affiliation-icon" src="static/images/affiliation_icons/uoft.svg">
-                          7. Peter Munk Cardiac Center <img class="affiliation-icon" src="static/images/affiliation_icons/uhn.jpg"></span>
+                          7. University Health Network <img class="affiliation-icon" src="static/images/affiliation_icons/uhn.jpg"></span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                     <span class="eql-cntrb"><small><sup>‡</sup>Indicates Equal Advising</small></span>
                   </div>
@@ -190,7 +201,7 @@
             training objectives commonly used by existing genomic FMs (i.e. next token prediction and masked language modelling)
             are <strong>ill-equipped</strong> to handle the <strong>unique characteristics of genomic sequences</strong>.
             Recent estimates have shown that 90%-95% of nucleotide positions are not under evolutionary constraint,
-            meaning mutations to the nucleotide would not impact fitness. Pre-training a genomic FM by reconstructing
+            meaning mutations to these nucleotides would not impact fitness. Pre-training a genomic FM by reconstructing
             these nucleotides essentially conditions it to predict noise, resulting in a poor representations
             for several relevant downstream tasks. In our work, we tackle this challenge, designing a
             <strong>biologically inspired</strong> self-supervised objective that we used to train a powerful new RNA
@@ -211,11 +222,11 @@
           <p style="margin-top:-10px; font-size: 11px; color:#b7b7b7">Orthrus is a mythological two-headed dog with a snake tail.</p>
         </div>
         <div class="content has-text-justified">
-          <p>We're excited to introduce Orthrus, an RNA foundation model trained using the Mamba architecture using a novel, biologically
-            inspired contrastive learning objective that captures over 870 million interactions between over 49 million unique RNA transcripts. Orthrus is
+          <p>We're excited to introduce Orthrus, an RNA foundation model trained on the Mamba architecture using a novel, biologically
+            inspired contrastive learning objective that captures more than 870 million interactions between over 49 million unique RNA transcripts. Orthrus is
             pre-trained to associate RNA transcripts that are related through function and evolution. This biologically motivated representation allows
-            Orthrus to perform strongly when tasked to predict RNA properties such as RNA stability, localization, and translational efficiency.
-            We find that fitting even linear models on Orthrus embeddings yields performance that approaches task-specific supervised models.
+            Orthrus to perform strongly when tasked to predict the functional and regulatory properties of RNA.
+            We find that fitting simple linear models on Orthrus embeddings yields performance that approaches task-specific supervised models.
             Orthrus is also highly data efficient, achieving high accuracy in comparison to supervised approaches when fine-tuning using as
             few as 45 data samples. Below, we provide an animated visualization of the Orthrus foundation model.
             The code and weights for Orthrus can be found at: <a href="https://huggingface.co/antichronology/orthrus"> [ Weights ]</a>.</p>
@@ -252,8 +263,8 @@
           <img src="static/images/Orthrus_loss_full.png" alt="MY ALT TEXT"/>
           <p style="font-size: 12px; color: #b7b7b7;">
             Left: Visualization of RNA transcript embeddings throughout Orthrus training.
-            Transcripts are randomly distributed in embedding space prior to training, and the Orthrus loss function
-            pulls transcripts related through splicing and orthology close, while pushing unrelated transcripts apart.
+            Transcripts are randomly distributed in embedding space prior to training. The Orthrus loss function
+            pulls transcripts related through splicing and orthology closer, while pushing unrelated transcripts apart.
             Right: Orthrus is trained using the DCL loss function.
           </p>
         </div>
@@ -261,9 +272,9 @@
           <p>
             Orthrus is trained using contrastive learning, which constructs a representation space
             for RNA transcripts by maximizing embedding similarity between an arbitrary transcript and
-            a transcript that is randomly sampled from a set of transcripts related by function or evolution.
+            a transcript randomly sampled from its set of transcripts related by function or evolution.
             The embedding similarity between all unrelated transcripts is simultaneously minimized.
-            We construct our contrastive dataset with a simple hypothesis: RNA transcripts related through
+            We construct our contrastive dataset with a simple hypothesis: RNA transcripts related by
             alternative splicing and orthologous processes should be closer in latent space than those that
             are not. To this end, we collect these positive pair interactions using splicing annotations
             from GENCODE and RefSeq, and ortholog alignments from the
@@ -295,7 +306,7 @@
             <li>
               <strong>RNA Half Life:</strong>
               This regression task measures the decay rate of mRNA in cells, and 
-              is an important cellular property to measure due to its implications for protein expression regulation.
+              is an important cellular property due to its implications for protein expression regulation.
               We use the <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x">
                 Agarwal and Kelley (2022)</a> dataset for this benchmark, which consists of 10,432 human and
               11,008 mouse RNA sequences with corresponding measurements.
@@ -333,8 +344,9 @@
             task-specific models in both linear probing and fine tuning contexts. For linear probing, we simply train
             a linear model on top of fixed FM embeddings, while for fine-tuning we perform end-to-end training on the
             labelled prediction dataset. Overall, we see that Orthrus outperforms existing genomic FMs, while approaching
-            supervised performance designed specifically for RNA property prediction such as <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x"> Saluki</a> using only a linear model.
-            This indicates that by just fitting a linear model on trained Orthrus embeddings it's possible to achieve tuned DNN performance.
+            the performance of supervised models designed specifically for RNA property prediction such as
+            <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x"> Saluki</a>.
+            In our experiments, by just fitting a linear model on trained Orthrus embeddings, Orthrus is able to achieve tuned DNN performance.
             Orthrus also shows strong data efficiency for fine-tuning,
             highlighting its potential to be used for extrapolating small experimental datasets.
           </p>
