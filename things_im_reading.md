@@ -42,10 +42,13 @@ title: Things I'm Reading
 - [2023/12] House of chains by Steven Erikson 5/5
 - [2024/02] Midnight Tides Steven Erikson 5/5
 - [2024/03] The Bone Hunters Steven Erikson 4/5
-    - I had a bit of a harder time getting to like the main character of 
+    - I had a bit of a harder time getting to like the main character of Adjunt Tavore
 - [2024/04] Reaper's Gale by Steven Erikson 4/5
 - [2024/05] Toll The hounds by Steven Erikson 3/5
 - [2024/07] The Glass Castle 4/5 by Jeannette Walls
+    - Major vibe shift from previous works.
+    - I was ready to drop this book but am glad I pushed through.
+    - Human ability to adapt is quite amazing.
 - [2024/08] Outliers by Malcom Gladwell 3/5 
     - Popular science is always iffy with me since I feel like a lot of these concepts get oversimplified and not enough nuance is communicated
 - [2024/09] Leviathan Wakes by James Corey 5/5
@@ -55,7 +58,6 @@ title: Things I'm Reading
 - [2024/09] There is no antimemetics division by qntm 5/5
     - Might have to add this to my all time favorites
     - So many cool ideas and concepts here absolutely amazing. 
-    - I think that videogames are like time antimemes. All of a sudden you don't know where the time went and it makes it feel dangerous. 
     - Avoiding thinking about hard problems that you are worried about are like antimemes. 
 
 ## All time favorites
