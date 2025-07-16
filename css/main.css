@@ -1,3 +1,44 @@
+:root,
+[data-theme="dark"] {
+    --color-background: #292b4b;
+    --color-text-main: #E5E5E5;
+    --color-panel-background: #ced7dd;
+    --color-panel-text: #333333;
+    --color-content-background: #292b4b;
+    --color-card-background: #343b4f;
+    --color-card-border: transparent;
+    --color-accent: #8cb2d9;
+    --color-link-hover-background: #b7c1c7;
+    --color-text-muted: #b0c4de;
+    --color-text-header: #333333;
+    --color-timeline-line: #4a5568;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-shadow-hover: rgba(0, 0, 0, 0.3);
+    --color-favorites-background: #2a2d3e;
+    --color-rating-background: #4a5568;
+    --color-icon: var(--color-panel-text);
+}
+
+[data-theme="light"] {
+    --color-background: #FFFBEB;
+    --color-text-main: #403B3B;
+    --color-panel-background: #FAEBD7;
+    --color-panel-text: #403B3B;
+    --color-content-background: #FFFBEB;
+    --color-card-background: #FFFEFA;
+    --color-card-border: #EADDCB;
+    --color-accent: #2a2d3e;
+    --color-link-hover-background: #F0E5D8;
+    --color-text-muted: #7D7370;
+    --color-text-header: #403B3B;
+    --color-timeline-line: #EADDCB;
+    --color-shadow: rgba(0, 0, 0, 0.07);
+    --color-shadow-hover: rgba(0, 0, 0, 0.09);
+    --color-favorites-background: #FAEBD7;
+    --color-rating-background: #F0E5D8;
+    --color-icon: var(--color-accent);
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -10,81 +51,55 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent the body from scrolling */
-}
-
-body {
     opacity: 1;
-    /* transition: opacity .5s ease-in-out; */
-    /* animation: fadein .5s; */
-    background-color: #1B1B1B;
-    color: #E5E5E5;
+    background-color: var(--color-background);
+    color: var(--color-text-main);
     font-family: 'Georgia', serif;
-    /* Example font */
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
- */
 .split-screen {
     display: flex;
-    height: 100vh; /* Lock the container to the viewport height */
+    height: 100vh;
 }
 
 .left {
     width: 30%;
     padding: 40px 20px;
-    background-color: #ced7dd; /* Reverted to light theme */
-    color: #333333; /* Reverted to dark text */
+    background-color: var(--color-panel-background);
+    color: var(--color-panel-text);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keep overall content centered */
+    align-items: center;
     gap: 20px;
     border-radius: 0;
-    overflow-y: auto; /* Add a scrollbar only if content overflows on short screens */
+    overflow-y: auto;
+    border-right: 1px solid var(--color-card-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .text-content {
     max-width: 700px;
-    /* Maximum width for the text content */
     margin: 0 auto;
-    /* Centers the text content horizontally */
     padding: 20px;
-    /* Padding around the text */
     font-size: 16px;
-    /* Font size */
     line-height: 1.5;
-    /* Line height for readability */
-    color: #E5E5E5;
-    /* Text color */
+    color: var(--color-text-main);
 }
 
 .right {
     width: 70%;
     overflow-y: scroll;
-    /* Enables vertical scrolling */
     height: 100vh;
     scroll-behavior: smooth;
-    /* Sets the height to the full viewport height */
-    /* Add additional styling for the right side here */
     padding: 20px;
-    /* Adds some space around the content */
-    background-color: #292b4b;
+    background-color: var(--color-content-background);
     border-radius: 5px;
-    /* Rounded corners */
-    color: #E5E5E5;
-    /* Text color for the right panel */
+    color: var(--color-text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* New Project Card Styles */
 .project-cards-container {
     display: grid;
     gap: 20px;
@@ -92,29 +107,31 @@ body {
 
 .project-card {
     display: flex;
-    background-color: #343b4f;
+    background-color: var(--color-card-background);
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--color-card-border);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--color-shadow);
 }
 
 .project-card-image {
     width: 200px;
     flex-shrink: 0;
-    background-color: #343b4f; /* Match the card background for a seamless look */
+    background-color: var(--color-card-background);
+    transition: background-color 0.3s ease;
 }
 
 .project-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Change from 'cover' to 'contain' */
+    object-fit: contain;
 }
 
 .project-card-content {
@@ -127,13 +144,11 @@ body {
 
 .project-card-subtitle {
     font-style: italic;
-    color: #a9a9a9;
+    color: var(--color-text-muted);
     margin-top: -5px;
     margin-bottom: 10px;
 }
-/* End New Project Card Styles */
 
-/* Talk Card Specific Styles */
 .talk-card {
     flex-direction: column;
 }
@@ -141,10 +156,9 @@ body {
 .talk-card .project-card-image {
     width: 100%;
     height: 180px;
-    position: relative; /* Needed for the play icon overlay */
+    position: relative;
 }
 
-/* Play icon overlay */
 .talk-card .project-card-image::after {
     content: '▶';
     position: absolute;
@@ -153,7 +167,7 @@ body {
     transform: translate(-50%, -50%);
     font-size: 50px;
     color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
@@ -174,90 +188,15 @@ body {
     font-size: 0.9em;
 }
 
-/* End New Project Card Styles */
-
-
 .default_background {
     width: 100%;
     overflow-y: scroll;
-    /* Enables vertical scrolling */
     height: 100vh;
-    /* Sets the height to the full viewport height */
-    /* Add additional styling for the right side here */
     padding: 20px;
-    /* Adds some space around the content */
-    background-color: #343b4f;
+    background-color: var(--color-content-background);
     border-radius: 5px;
-    /* Rounded corners */
-    color: #E5E5E5;
-    /* Text color for the right panel */
-}
-
-/* The .link-container is no longer used, so we can remove it. */
-/* 
-.link-container {
-    width: 100%;
-    max-width: 550px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.link-container img {
-    width: 150px;
-    height: auto;
-    margin-right: 10px;
-}
-*/
-
-.large-image {
-    width: 500px;
-    /* Larger width */
-    height: auto;
-    /* Maintains aspect ratio */
-    margin-bottom: 20px;
-}
-
-.link-container h3,
-.link-container p {
-    margin: 0;
-    padding: 5px;
-    /* Spacing between header and paragraph */
-}
-
-.link-container h3 {
-    margin-bottom: 5px;
-    /* Spacing between header and paragraph */
-}
-
-.link-container a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    flex-wrap: wrap;
-    /* Allows wrapping if there isn't enough space */
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 700px) {
-    /*
-    .link-container a {
-        flex-direction: column;
-    }
-
-    .link-container img {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    */
-    .project-card {
-        flex-direction: column;
-    }
-    .project-card-image {
-        width: 100%;
-        height: 180px; /* Give a fixed height for mobile images */
-    }
+    color: var(--color-text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 div.profile-photo {
@@ -277,7 +216,6 @@ div.profile-photo img {
     margin: 0;
 }
 
-
 .about-section {
     font-size: 18px;
     line-height: 1.5;
@@ -286,76 +224,68 @@ div.profile-photo img {
 .social-link {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Left-justify content inside the link */
-    color: #333333; /* Reverted to dark text */
+    justify-content: flex-start;
+    color: var(--color-panel-text);
     text-decoration: none;
     margin: 0;
-    padding: 10px 15px; /* Adjust padding for better alignment */
+    padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-size: 16px;
-    text-align: left; /* Ensure text aligns left */
+    text-align: left;
     width: 100%;
     max-width: 220px;
 }
 
 .social-link i {
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 10px;
+    color: var(--color-icon);
+    width: 20px;
+    text-align: center;
 }
 
 .social-link:hover {
     text-decoration: none;
-    background-color: #b7c1c7; /* Darker hover for light theme */
+    background-color: var(--color-link-hover-background);
 }
 
 .name {
     font-size: 1.5em;
     margin-bottom: 0;
     margin-left: 0;
-    color: #333333; /* Reverted to dark text */
+    color: var(--color-text-header);
     text-align: center;
 }
 
 .email {
     display: block;
-    color: #333333;
-    /* Text color, adjust as needed */
+    color: var(--color-panel-text);
     text-decoration: none;
-    /* Removes underline */
     margin-bottom: 20px;
-    /* Spacing between email and other links */
     font-size: 16px;
-    /* Adjust font size as needed */
 }
 
 .email:hover {
     text-decoration: underline;
-    /* Underline on hover for visual feedback */
 }
 
 .entry {
-    margin-bottom: 0; /* Use gap for spacing instead */
+    margin-bottom: 0;
 }
 
 a img {
     margin-right: 10px;
-    /* Spacing between image and link text */
     vertical-align: middle;
-    /* Aligns image with link text */
-    /* Other styling as needed */
     width: 30%;
     border-radius: 10px;
 }
 
 .link-symbol {
     margin-right: 10px;
-    /* Spacing between symbol and content */
 }
 
-/* Timeline styles */
 .timeline {
     position: relative;
-    /* Create a "gutter" on the left for the timeline line and markers */
     padding-left: 150px;
     margin-left: 20px;
 }
@@ -363,75 +293,72 @@ a img {
 .timeline::before {
     content: '';
     position: absolute;
-    /* Position the line inside the gutter */
     left: 20px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #4a5568;
+    background: var(--color-timeline-line);
+    transition: background-color 0.3s ease;
 }
 
 .timeline-item {
     display: flex;
     margin-bottom: 25px;
     position: relative;
-    align-items: center; /* Vertically center date, marker, and content */
+    align-items: center;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    /* Position the marker on the timeline line */
     left: -139px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #343b4f; /* Match the content box background */
-    border: 3px solid #4a5568; /* Match the line color */
+    background: var(--color-panel-background);
+    border: 3px solid var(--color-timeline-line);
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .timeline-item:hover::before {
-    background-color: #8cb2d9; /* A highlight color on hover */
-    border-color: #8cb2d9;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
 }
-
 
 .timeline-date {
     font-weight: bold;
-    color: #E5E5E5;
-    /* The date now sits to the left of the content, inside the gutter */
+    color: var(--color-text-muted);
     position: absolute;
     left: -120px;
-    width: 100px; /* Give the date a fixed width */
+    width: 100px;
     text-align: right;
 }
 
 .timeline-content {
-    background: #343b4f;
-    padding: 20px; /* Increased padding */
+    background: var(--color-card-background);
+    padding: 20px;
     border-radius: 8px;
     flex-grow: 1;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--color-card-border);
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--color-shadow-hover);
 }
-
 
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1.1em; /* Slightly larger title */
+    font-size: 1.1em;
 }
 
 .timeline-content h3 a {
     text-decoration: none;
-    color: #E5E5E5;
+    color: var(--color-accent);
 }
 
 .timeline-content h3 a:hover {
@@ -441,15 +368,14 @@ a img {
 .timeline-authors {
     font-style: italic;
     font-size: 0.9em;
-    color: #b0c4de;
+    color: var(--color-text-muted);
     margin-top: 5px;
-    margin-bottom: 20px; /* Further increased space */
+    margin-bottom: 20px;
 }
 
 .timeline-publication {
     font-style: italic;
-    /* A lighter, more readable color */
-    color: #8cb2d9;
+    color: var(--color-text-muted);
     margin-top: -10px;
     margin-bottom: 10px;
 }
@@ -457,7 +383,7 @@ a img {
 .timeline-sub-entries {
     margin-top: 15px;
     padding-left: 20px;
-    border-left: 2px solid #4a5568;
+    border-left: 2px solid var(--color-timeline-line);
 }
 
 .sub-entry {
@@ -466,7 +392,7 @@ a img {
 
 .sub-entry-publication {
     font-weight: bold;
-    color: #b0c4de;
+    color: var(--color-text-muted);
     margin-bottom: 5px;
 }
 
@@ -477,23 +403,24 @@ a img {
 }
 
 .sub-entry-link:hover {
-    /* You can add a subtle hover effect if you like */
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
 }
 
-/* Reading Page Styles */
 .favorites-section {
-    background-color: #2a2d3e; /* A distinct, darker background */
+    background-color: var(--color-favorites-background);
     padding: 25px;
     border-radius: 8px;
     margin-bottom: 30px;
+    transition: background-color 0.3s ease;
 }
 
-.favorites-section h2 {
+.favorites-section h2,
+.favorites-section h3 {
     margin-top: 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #8cb2d9;
+    border-bottom: 2px solid var(--color-accent);
+    transition: border-color 0.3s ease;
 }
 
 .book-list {
@@ -502,10 +429,12 @@ a img {
 }
 
 .book-card {
-    background-color: #343b4f;
+    background-color: var(--color-card-background);
     border-radius: 8px;
     padding: 20px;
-    border-left: 5px solid #8cb2d9; /* Accent color */
+    border: 1px solid var(--color-card-border);
+    border-left: 5px solid var(--color-accent);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .book-card-header {
@@ -521,15 +450,17 @@ a img {
 
 .book-rating {
     font-weight: bold;
-    background-color: #4a5568;
+    background-color: var(--color-rating-background);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9em;
+    color: var(--color-panel-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .book-author {
     font-style: italic;
-    color: #a9a9a9;
+    color: var(--color-text-muted);
     margin-bottom: 15px;
 }
 
@@ -551,70 +482,131 @@ a img {
 }
 
 .favorites-list li {
-    background-color: #343b4f;
-    padding: 10px 15px;
+    background-color: transparent;
+    padding: 10px 0;
     border-radius: 5px;
-    margin-bottom: 0; /* Use grid gap for spacing */
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--color-card-border);
 }
-/* End Reading Page Styles */
 
-/* Responsive Styles for Mobile */
 @media (max-width: 800px) {
     body {
-        overflow-y: auto; /* Re-enable scrolling for the body on mobile */
+        overflow-y: auto;
     }
-
     .split-screen {
         flex-direction: column;
-        height: auto; /* Allow the container to grow beyond the viewport */
+        height: auto;
     }
-
     .left,
     .right {
         width: 100%;
         height: auto;
         overflow-y: visible;
         border-radius: 0;
-        padding: 20px; /* Adjust padding for mobile */
+        padding: 20px;
     }
-
     .left {
-        padding-top: 40px; /* Keep more space at the top */
-        gap: 15px; /* Reduce gap on mobile */
+        padding-top: 40px;
+        gap: 15px;
+        border-right: none;
     }
-
     div.profile-photo {
         width: 150px;
         height: 150px;
     }
-
     .project-card {
         flex-direction: column;
     }
     .project-card-image {
         width: 100%;
-        height: 180px; /* Give a fixed height for mobile images */
+        height: 180px;
     }
-
-    /* Timeline Adjustments */
     .timeline {
         padding-left: 40px;
         margin-left: 0;
     }
-
     .timeline-item {
-        display: block; /* Stack date, content, etc. */
+        display: block;
     }
-
     .timeline-date {
-        position: static; /* Let the date sit in the natural flow */
+        position: static;
         width: auto;
         text-align: left;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     .timeline-item::before {
-        left: -29px; /* Re-align the marker with the new padding */
+        left: -29px;
     }
+}
+
+/* Theme Switch Styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 220px;
+}
+
+.theme-name {
+    font-size: 14px;
+    color: var(--color-panel-text);
+    transition: color 0.3s ease;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-link-hover-background);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-panel-background);
+    box-shadow: 0 0 1px var(--color-text-header);
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color-accent);
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 28px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }

@@ -63,7 +63,16 @@
             <!-- Other Pages -->
             <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background-color: #b7c1c7;">
             <div class="entry">
-                <a href="#misc" class="social-link"><i class="fas fa-book-open fa-fw"></i> Reading List</a>
+                <a href="/things_im_reading.html" class="social-link"><i class="fas fa-book-open fa-fw"></i> Reading List</a>
+            </div>
+
+            <div class="theme-switch-wrapper">
+                <span class="theme-name">Light</span>
+                <label class="theme-switch" for="theme-toggle-checkbox">
+                    <input type="checkbox" id="theme-toggle-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <span class="theme-name">Dark</span>
             </div>
         </div>
         <div class="right">
@@ -72,6 +81,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+        const body = document.body;
+
+        // Function to apply the theme
+        const applyTheme = (theme) => {
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            // If dark theme, check the box. If light theme, uncheck it.
+            themeToggleCheckbox.checked = theme === 'dark';
+        };
+
+        // Event listener for the toggle
+        themeToggleCheckbox.addEventListener('change', () => {
+            const newTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
+            applyTheme(newTheme);
+        });
+
+        // Apply saved theme on initial load
+        const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
+        applyTheme(savedTheme);
+    </script>
 </body>
 
 </html>
