@@ -205,6 +205,7 @@ div.profile-photo {
     border-radius: 50%;
     overflow: hidden;
     margin: 0;
+    flex-shrink: 0; /* Prevent the photo from shrinking */
 }
 
 div.profile-photo img {
