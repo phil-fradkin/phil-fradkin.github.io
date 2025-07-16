@@ -1,5 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent the body from scrolling */
 }
 
 body {
@@ -24,18 +35,20 @@ body {
  */
 .split-screen {
     display: flex;
+    height: 100vh; /* Lock the container to the viewport height */
 }
 
 .left {
     width: 30%;
-    /* Add additional styling for the left side here */
-    padding: 20px;
-    /* Adds some space around the content */
-    background-color: #ced7dd;
-    border-radius: 10px;
-    /* Rounded corners */
-    color: #333333;
-    /* Text color for the left panel */
+    padding: 40px 20px;
+    background-color: #ced7dd; /* Reverted to light theme */
+    color: #333333; /* Reverted to dark text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keep overall content centered */
+    gap: 20px;
+    border-radius: 0;
+    overflow-y: auto; /* Add a scrollbar only if content overflows on short screens */
 }
 
 .text-content {
@@ -69,6 +82,99 @@ body {
     /* Text color for the right panel */
 }
 
+/* New Project Card Styles */
+.project-cards-container {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    background-color: #343b4f;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-image {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #343b4f; /* Match the card background for a seamless look */
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Change from 'cover' to 'contain' */
+}
+
+.project-card-content {
+    padding: 20px;
+}
+
+.project-card-content h3 {
+    margin-top: 0;
+}
+
+.project-card-subtitle {
+    font-style: italic;
+    color: #a9a9a9;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+/* End New Project Card Styles */
+
+/* Talk Card Specific Styles */
+.talk-card {
+    flex-direction: column;
+}
+
+.talk-card .project-card-image {
+    width: 100%;
+    height: 180px;
+    position: relative; /* Needed for the play icon overlay */
+}
+
+/* Play icon overlay */
+.talk-card .project-card-image::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.talk-card:hover .project-card-image::after {
+    opacity: 1;
+}
+
+.talk-card .project-card-content {
+    padding: 15px;
+}
+
+.talk-card .project-card-content h3 {
+    font-size: 1.1em;
+}
+
+.talk-card .project-card-subtitle {
+    font-size: 0.9em;
+}
+
+/* End New Project Card Styles */
+
+
 .default_background {
     width: 100%;
     overflow-y: scroll;
@@ -85,10 +191,11 @@ body {
     /* Text color for the right panel */
 }
 
+/* The .link-container is no longer used, so we can remove it. */
+/* 
 .link-container {
     width: 100%;
     max-width: 550px;
-    /* Constant width for the entire container */
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -96,11 +203,10 @@ body {
 
 .link-container img {
     width: 150px;
-    /* Constant width for the image */
     height: auto;
-    /* Maintains aspect ratio */
     margin-right: 10px;
 }
+*/
 
 .large-image {
     width: 500px;
@@ -133,37 +239,42 @@ body {
 
 /* Media Query for Smaller Screens */
 @media (max-width: 700px) {
+    /*
     .link-container a {
         flex-direction: column;
-        /* Stacks image, header, and paragraph vertically */
     }
 
     .link-container img {
         margin-right: 0;
         margin-bottom: 10px;
-        /* Spacing between image and text */
+    }
+    */
+    .project-card {
+        flex-direction: column;
+    }
+    .project-card-image {
+        width: 100%;
+        height: 180px; /* Give a fixed height for mobile images */
     }
 }
 
-.profile-photo {
-    width: 100%;
-    /* Takes up the full width of the container */
-    height: auto;
-    /* Automatically calculated based on the original aspect ratio */
-    display: block;
-    /* Ensures that the image is treated as a block-level element */
-    max-width: 100%;
-    /* Ensures that the image never exceeds the width of its container */
-    border-radius: 10%;
-    /* Makes the image circular */
-    /* border: 1px solid #1B1B1B; */
-    /* Thick border, adjust thickness and color as needed */
-    margin: 0 auto 30px;
-    /* Centers the image horizontally and sets a bottom margin of 30px */
-    max-width: 350px;
-    /* Sets a maximum width of 200 pixels for the image */
-    align-items: center;
+div.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
 }
+
+div.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+}
+
 
 .about-section {
     font-size: 18px;
@@ -171,34 +282,36 @@ body {
 }
 
 .social-link {
-    display: block;
-    color: #333333;
-    /* Text color, adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left-justify content inside the link */
+    color: #333333; /* Reverted to dark text */
     text-decoration: none;
-    /* Removes underline */
-    margin-left: 30px;
-    margin-bottom: 10px;
-    /* Spacing between links */
-    font-size: clamp(8px, 1.8vw, 18px);
-    /* Adjusts the font size based on 2% of the viewport width */
-    /* Adjust font size as needed */
-    text-align: left;
-    /* Centers the text within the links */
+    margin: 0;
+    padding: 10px 15px; /* Adjust padding for better alignment */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-align: left; /* Ensure text aligns left */
+    width: 100%;
+    max-width: 220px;
+}
+
+.social-link i {
+    margin-right: 10px; /* Space between icon and text */
 }
 
 .social-link:hover {
-    text-decoration: underline;
-    /* Underline on hover for visual feedback */
+    text-decoration: none;
+    background-color: #b7c1c7; /* Darker hover for light theme */
 }
 
 .name {
-    font-size: clamp(20px, 2vw, 28px);
-    /* Adjust font size as needed */
-    margin-bottom: 10px;
-    margin-left: 30px;
-    /* Spacing between name and email */
-    color: #333333;
-    /* Text color, adjust as needed */
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin-left: 0;
+    color: #333333; /* Reverted to dark text */
+    text-align: center;
 }
 
 .email {
@@ -219,8 +332,7 @@ body {
 }
 
 .entry {
-    margin-bottom: 20px;
-    /* Spacing between entries, adjust as needed */
+    margin-bottom: 0; /* Use gap for spacing instead */
 }
 
 a img {
@@ -236,4 +348,266 @@ a img {
 .link-symbol {
     margin-right: 10px;
     /* Spacing between symbol and content */
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    /* Create a "gutter" on the left for the timeline line and markers */
+    padding-left: 150px;
+    margin-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    /* Position the line inside the gutter */
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #4a5568;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+    align-items: center; /* Vertically center date, marker, and content */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    /* Position the marker on the timeline line */
+    left: -139px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #343b4f; /* Match the content box background */
+    border: 3px solid #4a5568; /* Match the line color */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    background-color: #8cb2d9; /* A highlight color on hover */
+    border-color: #8cb2d9;
+}
+
+
+.timeline-date {
+    font-weight: bold;
+    color: #E5E5E5;
+    /* The date now sits to the left of the content, inside the gutter */
+    position: absolute;
+    left: -120px;
+    width: 100px; /* Give the date a fixed width */
+    text-align: right;
+}
+
+.timeline-content {
+    background: #343b4f;
+    padding: 20px; /* Increased padding */
+    border-radius: 8px;
+    flex-grow: 1;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.timeline-content h3 {
+    margin-top: 0;
+    font-size: 1.1em; /* Slightly larger title */
+}
+
+.timeline-content h3 a {
+    text-decoration: none;
+    color: #E5E5E5;
+}
+
+.timeline-content h3 a:hover {
+    text-decoration: underline;
+}
+
+.timeline-authors {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #b0c4de;
+    margin-top: 5px;
+    margin-bottom: 20px; /* Further increased space */
+}
+
+.timeline-publication {
+    font-style: italic;
+    /* A lighter, more readable color */
+    color: #8cb2d9;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.timeline-sub-entries {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 2px solid #4a5568;
+}
+
+.sub-entry {
+    margin-bottom: 0;
+}
+
+.sub-entry-publication {
+    font-weight: bold;
+    color: #b0c4de;
+    margin-bottom: 5px;
+}
+
+.sub-entry-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.sub-entry-link:hover {
+    /* You can add a subtle hover effect if you like */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+/* Reading Page Styles */
+.favorites-section {
+    background-color: #2a2d3e; /* A distinct, darker background */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.favorites-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8cb2d9;
+}
+
+.book-list {
+    display: grid;
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #343b4f;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 5px solid #8cb2d9; /* Accent color */
+}
+
+.book-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: -10px;
+}
+
+.book-title {
+    margin: 0;
+}
+
+.book-rating {
+    font-weight: bold;
+    background-color: #4a5568;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.book-author {
+    font-style: italic;
+    color: #a9a9a9;
+    margin-bottom: 15px;
+}
+
+.book-notes {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.book-notes li {
+    margin-bottom: 5px;
+}
+
+.favorites-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.favorites-list li {
+    background-color: #343b4f;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 0; /* Use grid gap for spacing */
+}
+/* End Reading Page Styles */
+
+/* Responsive Styles for Mobile */
+@media (max-width: 800px) {
+    .split-screen {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        border-radius: 0;
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .left {
+        padding-top: 40px; /* Keep more space at the top */
+        gap: 15px; /* Reduce gap on mobile */
+    }
+
+    div.profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+    .project-card-image {
+        width: 100%;
+        height: 180px; /* Give a fixed height for mobile images */
+    }
+
+    /* Timeline Adjustments */
+    .timeline {
+        padding-left: 40px;
+        margin-left: 0;
+    }
+
+    .timeline-item {
+        display: block; /* Stack date, content, etc. */
+    }
+
+    .timeline-date {
+        position: static; /* Let the date sit in the natural flow */
+        width: auto;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .timeline-item::before {
+        left: -29px; /* Re-align the marker with the new padding */
+    }
 }

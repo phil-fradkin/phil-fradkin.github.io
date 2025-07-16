@@ -1,0 +1,207 @@
+books:
+  - title: "The Stand"
+    author: "Stephen King"
+    date: "2023/05"
+    rating: "5/5"
+    notes:
+      - "I've had to stop reading this book a few times because it affected my mood so much."
+      - "Slightly terrifying but a fantastic standoff between good and evil."
+      - "Reminds me of lord of the rings in that way."
+
+  - title: "Project Hail Mary"
+    author: "Andy Weir"
+    date: "2023/06"
+    rating: "3/5"
+    notes:
+      - "It was really hard to peel away from this book."
+      - "The way science is depicted annoyed me."
+      - "Everything worked out of the box and it was always super innovative instantly solving all the problems."
+  
+  - title: "Faithful Robot"
+    author: "Stanislaw Lem"
+    date: "2023/07"
+    rating: "5/5"
+    notes:
+      - "Absolutely hilarious short story. Couldn't stop laughing."
+
+  - title: "The Rise and Fall of D.O.D.O"
+    author: "Nicole Galland, Neal Stephenson"
+    date: "2023/07"
+    rating: "2/5"
+    notes:
+      - "It started off so fun but man a huge portion of this book can be cut."
+      - "So many really slow moments that don't really contribute to advancing the narrative."
+
+  - title: "Children of Time"
+    author: "Adrian Tchaikovsky"
+    date: "2023/08"
+    rating: "5/5"
+    notes:
+      - "I was captivated by the story."
+      - "I really loved the weirdness of the characters."
+      - "I liked the unclear identity of the god like character circling the planet."
+  
+  - title: "Children of Ruin"
+    author: "Adrian Tchaikovsky"
+    date: "2023/08"
+    rating: "4/5"
+    notes:
+      - "I had to stop reading this one during Neurips rebuttal because it was putting me in a real weird mood."
+      - "The depiction here of the alien life-form felt like it related to the concept of zombies."
+      - "It was even more powerful, however, since there was an eagerness for it to understand it on a human level."
+      - "It felt somehow similar to Lem's writings like Solaris."
+      - "The end felt a little rushed and idealistic like Hyperion."
+  
+  - title: "When We Cease to Understand the World"
+    author: "Benjamin Labatut"
+    date: "2023/09"
+    rating: "4/5"
+    notes:
+      - "A fun collection of stories imagining the lived experiences of scientists."
+      - "Unclear how much of it is grounded in some sort of historical evidence."
+
+  - title: "Gardens of the Moon"
+    author: "Steven Erikson"
+    date: "2023/09"
+    rating: "5/5"
+    notes:
+      - "An awesome saga with beautiful world building."
+      - "Sort of tough to get into but the payoff is fantastic."
+  
+  - title: "Deadhouse Gates"
+    author: "Steven Erikson"
+    date: "2023/10"
+    rating: "5/5"
+    notes:
+      - "I like that I don't have to learn new characters a bunch of them are there from the first book."
+      - "I have a bit of a hard time keeping track of Jhugs, Trells, and Tlan Imass."
+      - "Being engrossed in these other world is really fun."
+
+  - title: "Memories of Ice"
+    author: "Steven Erikson"
+    date: "2023/11"
+    rating: "4/5"
+
+  - title: "House of Chains"
+    author: "Steven Erikson"
+    date: "2023/12"
+    rating: "5/5"
+
+  - title: "Midnight Tides"
+    author: "Steven Erikson"
+    date: "2024/02"
+    rating: "5/5"
+
+  - title: "The Bone Hunters"
+    author: "Steven Erikson"
+    date: "2024/03"
+    rating: "4/5"
+    notes:
+      - "I had a bit of a harder time getting to like the main character of Adjunt Tavore."
+
+  - title: "Reaper's Gale"
+    author: "Steven Erikson"
+    date: "2024/04"
+    rating: "4/5"
+
+  - title: "Toll The Hounds"
+    author: "Steven Erikson"
+    date: "2024/05"
+    rating: "3/5"
+
+  - title: "The Glass Castle"
+    author: "Jeannette Walls"
+    date: "2024/07"
+    rating: "4/5"
+    notes:
+      - "Major vibe shift from previous works."
+      - "I was ready to drop this book but am glad I pushed through."
+      - "Human ability to adapt is quite amazing."
+      
+  - title: "Outliers"
+    author: "Malcom Gladwell"
+    date: "2024/08"
+    rating: "3/5"
+    notes:
+      - "Popular science is always iffy with me since I feel like a lot of these concepts get oversimplified and not enough nuance is communicated."
+  
+  - title: "Leviathan Wakes"
+    author: "James Corey"
+    date: "2024/09"
+    rating: "5/5"
+    notes:
+      - "Oh man I haven't experienced staying up late into the night since I lost track of time because I was reading in a long time. I really loved this book."
+  
+  - title: "Caliban's War"
+    author: "James Corey"
+    date: "2024/09"
+    notes:
+      - "It was pretty good I liked all the political drama but I am a bit too used to Steven Erikson's inaccessible sequels. Being able to jump straight in like a next episode in a series was strangely jarring."
+
+  - title: "There is no Antimemetics Division"
+    author: "qntm"
+    date: "2024/09"
+    rating: "5/5"
+    notes:
+      - "Might have to add this to my all time favorites."
+      - "So many cool ideas and concepts here absolutely amazing."
+      - "Avoiding thinking about hard problems that you are worried about are like antimemes."
+
+  - title: "Abbadon's Gate"
+    author: "James S. A. Corey"
+    date: "2024/11"
+    rating: "4/5"
+    
+  - title: "Cibola Burn"
+    author: "James S. A. Corey"
+    date: "2024/12"
+    rating: "4/5"
+    
+  - title: "Nemesis Games"
+    author: "James S. A. Corey"
+    date: "2025/01"
+    rating: "4/5"
+    
+  - title: "Babylon's Ashes"
+    author: "James S. A. Corey"
+    date: "2025/01"
+    rating: "5/5"
+    
+  - title: "Persepolis Rising"
+    author: "James S. A. Corey"
+    date: "2025/02"
+    rating: "4/5"
+    
+  - title: "Tiamat's Wrath"
+    author: "James S. A. Corey"
+    date: "2025/03"
+    rating: "3/5"
+    notes:
+      - "I have a newfound respect for George R. R. Martin."
+      - "The ending of this book series felt rushed"
+
+  - title: "Lapvona"
+    author: "Ottessa Moshfegh"
+    date: "2025/04"
+    rating: "3/5"
+
+  - title: "My Year of Rest and Relaxation"
+    author: "Ottessa Moshfegh"
+    date: "2025/05"
+    rating: "5/5"
+    notes:
+      - "A book has never made me feel so strongly."
+      - "I felt overwhelmed by the ending of the book and it came out of nowhere."
+      - "I don't feel like I was even that sympathetic to the main character but really connected to the last few pages where she describes the sympathy and love she felt for her friend."
+
+favorites:
+  - title: "Moloch"
+    author: "Scott Alexander"
+  - title: "Solaris"
+    author: "Stanislaw Lem"
+  - title: "Unsong"
+    author: "Scott Alexander"
+  - title: "There is no Antimemetics Division"
+    author: "qntm"
+  - title: "My Year of Rest and Relaxation"
+    author: "Ottessa Moshfegh" 

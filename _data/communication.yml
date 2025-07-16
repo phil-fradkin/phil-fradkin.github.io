@@ -1,0 +1,24 @@
+- title: "Orthrus: Towards Evolutionary and Functional RNA Foundation Models"
+  link: "./science/orthrus.html"
+  image: "./science/static/images/orthrus_cleaned_up.png"
+  description: "In this work we train a Mamba based model to learn mature mRNA representations using contrastive learning. Our augmentations consist of orthologous, and alternatively spliced transcripts."
+
+- title: "MolPhenix or How Molecules Impact Cells: Unlocking Contrastive PhenoMolecular Retrieval"
+  link: "https://www.recursion.com/news/learning-the-effects-of-molecules-on-cells-with-molphenix"
+  image: "./images/phenomolecular_retrieval.png"
+  description: "We worked with folks from Recursion and Valence to create MolPhenix! It's a novel approach for learning the effects of concentration and molecules on cell morphology using large-scale phenomics data. To do that we innovate on the contrastive learning objective with the S2L loss."
+
+- title: "IsoCLR: Splicing up your predictions with RNA contrastive learning"
+  link: "./science/isoclr_2023.html"
+  image: "./images/CellularComponents_t_sne_top_3_go_root_terms_50 copy.png"
+  description: "This is a small explainer on IsoCLR or Splicing Up Your Predictions with RNA Contrastive Learning!"
+
+- title: "Concerto: A graph neural network approach for molecule carcinogenicity prediction"
+  link: "./science/concerto_2022.html"
+  image: "./images/concerto.jpeg"
+  description: "I'd like to give a brief explanation for the motivation and the work done in our publication Concerto: a graph neural network approach for molecule carcinogenicity prediction."
+
+- title: "I was a guest on a podcast: Statistically Insignificant"
+  link: "https://open.spotify.com/episode/1aRzadwiHPS16DpUEdYlBb?si=4250cb59742f491c"
+  image: "./images/statistically_insignificant.jpg"
+  description: "We recorded a podcast with my friend Erik Drysdale covering advancements in genomics over the last 20 years, state of predictive system in molecular biology, and a little bit of personal history!" 

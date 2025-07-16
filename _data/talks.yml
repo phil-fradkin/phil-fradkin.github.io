@@ -1,0 +1,17 @@
+- title: "Orthrus: Towards Evolutionary and Functional RNA Foundation Models"
+  subtitle: "MLCB 2024 Oral Presentation"
+  link: "https://www.youtube.com/watch?v=DMKuZl1EuP0"
+  image: "https://img.youtube.com/vi/DMKuZl1EuP0/hqdefault.jpg"
+  description: "An oral presentation of the Orthrus paper at the Machine Learning in Computational Biology (MLCB) workshop."
+
+- title: "MolPhenix: A Multimodal Foundation Model for PhenoMolecular Retrieval"
+  subtitle: "GenBio Invited Talk (2024)"
+  link: "https://www.youtube.com/watch?v=4d9BcFIOEEI"
+  image: "https://img.youtube.com/vi/4d9BcFIOEEI/hqdefault.jpg"
+  description: "An invited talk at GenBio discussing MolPhenix and its applications in phenomolecular retrieval."
+
+- title: "Concerto: A Graph Neural Network for Molecule Carcinogenicity Prediction"
+  subtitle: "ISMB 2022 Oral Presentation"
+  link: "https://www.youtube.com/watch?v=7krei9z02n4"
+  image: "https://img.youtube.com/vi/7krei9z02n4/hqdefault.jpg"
+  description: "Pre recorded presentation of the Concerto paper prepared for the ISMB 2022 conference." 
