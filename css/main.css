@@ -558,8 +558,13 @@ a img {
 
 /* Responsive Styles for Mobile */
 @media (max-width: 800px) {
+    body {
+        overflow-y: auto; /* Re-enable scrolling for the body on mobile */
+    }
+
     .split-screen {
         flex-direction: column;
+        height: auto; /* Allow the container to grow beyond the viewport */
     }
 
     .left,
