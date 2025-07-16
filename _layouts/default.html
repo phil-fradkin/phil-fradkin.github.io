@@ -2,7 +2,7 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}Personal website of Philip Fradkin, a PhD student at the University of Toronto working on machine learning and genomics.{% endif %}">
     <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | absolute_url }}">
-    <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}?v={{ site.time | date: '%s' }}">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y7WYDM9DP"></script>
