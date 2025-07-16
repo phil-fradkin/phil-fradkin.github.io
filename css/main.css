@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -71,6 +72,7 @@ body {
     overflow-y: scroll;
     /* Enables vertical scrolling */
     height: 100vh;
+    scroll-behavior: smooth;
     /* Sets the height to the full viewport height */
     /* Add additional styling for the right side here */
     padding: 20px;
