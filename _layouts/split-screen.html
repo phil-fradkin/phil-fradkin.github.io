@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}Personal website of Philip Fradkin, a PhD student at the University of Toronto working on machine learning and genomics.{% endif %}">
+    <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | absolute_url }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -43,6 +45,29 @@
                 <a href="/pdf/Philip_Fradkin_2024.pdf" target="_blank" class="social-link"><i
                         class="fas fa-file-alt"></i>
                     Resume</a>
+            </div>
+
+            <!-- Section Navigation -->
+            <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background-color: #b7c1c7;">
+
+            <div class="entry">
+                <a href="/#timeline" class="social-link"><i class="fas fa-stream fa-fw"></i> Timeline</a>
+            </div>
+            <div class="entry">
+                <a href="/#science-communication" class="social-link"><i class="fas fa-flask fa-fw"></i> SciComm</a>
+            </div>
+            <div class="entry">
+                <a href="/#talks" class="social-link"><i class="fas fa-comment-dots fa-fw"></i> Talks</a>
+            </div>
+            <div class="entry">
+                <a href="/#misc" class="social-link"><i class="fas fa-asterisk fa-fw"></i> Misc</a>
+            </div>
+
+            <!-- Other Pages -->
+            <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background-color: #b7c1c7;">
+
+            <div class="entry">
+                <a href="/things_im_reading.html" class="social-link"><i class="fas fa-book-open fa-fw"></i> Reading List</a>
             </div>
         </div>
         <div class="right">

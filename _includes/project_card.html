@@ -1,0 +1,23 @@
+{% comment %}
+  Expects:
+  - include.item: The project/talk/misc item object.
+  - include.type: An optional string, e.g., 'talk'.
+{% endcomment %}
+
+{% assign card_class = "project-card" %}
+{% if include.type == 'talk' %}
+  {% assign card_class = "project-card talk-card" %}
+{% endif %}
+
+<a href="{{ include.item.link }}" class="{{ card_class }}" target="_blank">
+    <div class="project-card-image">
+        <img src="{{ include.item.image | absolute_url }}" alt="{{ include.item.title }}">
+    </div>
+    <div class="project-card-content">
+        <h3>{{ include.item.title }}</h3>
+        {% if include.type == 'talk' and include.item.subtitle %}
+            <p class="project-card-subtitle">{{ include.item.subtitle }}</p>
+        {% endif %}
+        <p>{{ include.item.description }}</p>
+    </div>
+</a> 

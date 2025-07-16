@@ -1,6 +1,7 @@
 ---
 layout: split-screen
 title: Home
+description: "Personal website of Philip Fradkin, a PhD student at the University of Toronto at the intersection of machine learning and genomics. View my research timeline, projects, and talks."
 ---
 
 ## About me:
@@ -16,7 +17,7 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
 --- 
 --- 
 
-## Research Timeline
+<h2 id="timeline">Research Timeline</h2>
 
 <div class="timeline">
     {% for item in site.data.research_timeline %}
@@ -63,57 +64,32 @@ My PhD projects are in the areas of self-supervised contrastive training, and da
 ---
 ---
 
-## Science Communication
+<h2 id="science-communication">Science Communication</h2>
 
 <div class="project-cards-container">
     {% for project in site.data.communication %}
-        <a href="{{ project.link }}" class="project-card" target="_blank">
-            <div class="project-card-image">
-                <img src="{{ project.image }}" alt="{{ project.title }}">
-            </div>
-            <div class="project-card-content">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            </div>
-        </a>
+        {% include project_card.html item=project %}
     {% endfor %}
 </div>
 
 ---
 ---
 
-## Talks
+<h2 id="talks">Talks</h2>
 
 <div class="project-cards-container">
     {% for talk in site.data.talks %}
-        <a href="{{ talk.link }}" class="project-card talk-card" target="_blank">
-            <div class="project-card-image">
-                <img src="{{ talk.image }}" alt="{{ talk.title }}">
-            </div>
-            <div class="project-card-content">
-                <h3>{{ talk.title }}</h3>
-                <p class="project-card-subtitle">{{ talk.subtitle }}</p>
-                <p>{{ talk.description }}</p>
-            </div>
-        </a>
+        {% include project_card.html item=talk type='talk' %}
     {% endfor %}
 </div>
 
 --- 
 --- 
 
-## Misc
+<h2 id="misc">Misc</h2>
 
 <div class="project-cards-container">
     {% for project in site.data.misc %}
-        <a href="{{ project.link }}" class="project-card" target="_blank">
-            <div class="project-card-image">
-                <img src="{{ project.image }}" alt="{{ project.title }}">
-            </div>
-            <div class="project-card-content">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            </div>
-        </a>
+        {% include project_card.html item=project %}
     {% endfor %}
 </div>
