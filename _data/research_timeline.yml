@@ -1,3 +1,18 @@
+- title: "Orthrus: toward evolutionary and functional RNA foundation models"
+  date: "April 2026"
+  link: "https://www.nature.com/articles/s41592-026-03064-3"
+  publication: "Nature Methods (2026)"
+  authors:
+    - "Philip Fradkin*"
+    - "Ruian Shi*"
+    - "Taykhoom Dalal*"
+    - "Keren Isaev"
+    - "Brendan J. Frey"
+    - "Leo J. Lee†"
+    - "Quaid Morris†"
+    - "Bo Wang†"
+  note: "Published in Nature Methods. Orthrus is a Mamba-based mature RNA foundation model pre-trained using a novel self-supervised contrastive learning objective with biological augmentations from splice isoforms and orthologous genes."
+
 - title: "Co-founded blank.bio & Accepted into Y Combinator"
   date: "Summer 2025"
   link: "https://blank.bio"
@@ -22,22 +37,7 @@
     - "Ilyes Baali"
     - "Bo Wang"
     - "Quaid Morris"
-  note: "We present mRNABench, a comprehensive benchmarking suite for mature mRNA biology that evaluates the representational quality of embeddings from self-supervised nucleotide foundation models. *Denotes co-first authorship."
-
-- title: "Orthrus: towards evolutionary and functional RNA foundation models"
-  date: "January 2025"
-  link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11482885/"
-  publication: "bioRxiv (in review)"
-  authors:
-    - "Philip Fradkin*"
-    - "Ruian Shi*"
-    - "Taykhoom Dalal*"
-    - "Keren Isaev"
-    - "Brendan J. Frey"
-    - "Leo J. Lee†"
-    - "Quaid Morris†"
-    - "Bo Wang†"
-  note: "Orthrus is a Mamba-based mature RNA foundation model pre-trained using a novel self-supervised contrastive learning objective with biological augmentations from splice isoforms and orthologous genes. *Denotes co-first authorship. †Denotes co-supervising authorship."
+  note: "We present mRNABench, a comprehensive benchmarking suite for mature mRNA biology that evaluates the representational quality of embeddings from self-supervised nucleotide foundation models."
 
 - title: "On the Scalability of GNNs for Molecular Graphs"
   date: "December 2024"
@@ -65,7 +65,7 @@
     - "Ali Bashashati"
     - "Maciej Sypetkowski"
     - "Dominique Beaini"
-  note: "We propose MolPhenix, a model that learns a joint latent space between molecular structures and cellular morphology, significantly improving zero-shot molecular retrieval for drug discovery. *Denotes co-first authorship."
+  note: "We propose MolPhenix, a model that learns a joint latent space between molecular structures and cellular morphology, significantly improving zero-shot molecular retrieval for drug discovery."
   sub_entries:
     - publication: "NeurIPS 2024 Workshop - Foundation Models for Science"
       note: "🏆 Best Paper Award"
@@ -80,7 +80,7 @@
     - "Bo Wang"
     - "Brendan Frey"
     - "Leo J. Lee"
-  note: "Presented at the ICML Workshop on Computational Biology. *Denotes co-first authorship."
+  note: "Presented at the ICML Workshop on Computational Biology."
 
 - title: "Robustness to Adversarial Gradients"
   date: July 2022
