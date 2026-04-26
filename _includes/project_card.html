@@ -9,9 +9,9 @@
   {% assign card_class = "project-card talk-card" %}
 {% endif %}
 
-<a href="{{ include.item.link }}" class="{{ card_class }}" target="_blank">
+<a href="{{ include.item.link }}" class="{{ card_class }}"{% if include.item.link contains '://' %} target="_blank"{% endif %}>
     <div class="project-card-image">
-        <img src="{{ include.item.image | absolute_url }}" alt="{{ include.item.title }}">
+        <img src="{{ include.item.image | relative_url }}" alt="{{ include.item.title }}">
     </div>
     <div class="project-card-content">
         <h3>{{ include.item.title }}</h3>

@@ -3,10 +3,18 @@
 
 <head>
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}Personal website of Philip Fradkin, a PhD student at the University of Toronto working on machine learning and genomics.{% endif %}">
-    <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | absolute_url }}">
-    <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}?v={{ site.time | date: '%s' }}">
+    <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}Personal website of Philip Fradkin, cofounder at blank.bio building RNA foundation models.{% endif %}">
+    <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% feed_meta %}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y7WYDM9DP"></script>
@@ -27,7 +35,7 @@
                 <h1 class="name">Philip Fradkin</h1>
             </div>
             <div class="profile-photo">
-                <img src="{{ "/images/Phil.jpg" | absolute_url }}" alt="Your Photo" class="profile-photo">
+                <img src="{{ "/images/Phil.jpg" | relative_url }}" alt="Your Photo" class="profile-photo">
             </div>
             <div class="entry">
                 <a href="mailto:phil.fradkin@gmail.com" target="_blank" class="social-link"><i class="fa fa-envelope"
@@ -42,7 +50,7 @@
                         class="fab fa-twitter"></i> Twitter</a>
             </div>
             <div class="entry">
-                <a href="/pdf/Philip_Fradkin_2024.pdf" target="_blank" class="social-link"><i
+                <a href="/pdf/Philip_Fradkin_2025.pdf" target="_blank" class="social-link"><i
                         class="fas fa-file-alt"></i>
                     Resume</a>
             </div>
@@ -50,6 +58,9 @@
             <!-- Section Navigation -->
             <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background-color: #b7c1c7;">
 
+            <div class="entry">
+                <a href="#writing" class="social-link"><i class="fas fa-pen-nib fa-fw"></i> Writing</a>
+            </div>
             <div class="entry">
                 <a href="#timeline" class="social-link"><i class="fas fa-stream fa-fw"></i> Timeline</a>
             </div>
@@ -64,6 +75,10 @@
             <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background-color: #b7c1c7;">
             <div class="entry">
                 <a href="#misc" class="social-link"><i class="fas fa-book-open fa-fw"></i> Reading List</a>
+            </div>
+
+            <div class="sidebar-subscribe">
+                {% include subscribe.html compact=true %}
             </div>
 
             <div class="theme-switch-wrapper">
@@ -84,25 +99,19 @@
 
     <script>
         const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
-        const body = document.body;
 
-        // Function to apply the theme
         const applyTheme = (theme) => {
-            body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            // If dark theme, check the box. If light theme, uncheck it.
             themeToggleCheckbox.checked = theme === 'dark';
         };
 
-        // Event listener for the toggle
         themeToggleCheckbox.addEventListener('change', () => {
-            const newTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
-            applyTheme(newTheme);
+            applyTheme(themeToggleCheckbox.checked ? 'dark' : 'light');
         });
 
-        // Apply saved theme on initial load
-        const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
-        applyTheme(savedTheme);
+        // Sync checkbox with theme already applied by the head script
+        themeToggleCheckbox.checked = document.documentElement.getAttribute('data-theme') === 'dark';
     </script>
 </body>
 

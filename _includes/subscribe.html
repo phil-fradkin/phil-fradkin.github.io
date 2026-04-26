@@ -1,0 +1,19 @@
+{% assign compact = include.compact | default: false %}
+<div class="subscribe-form{% if compact %} subscribe-form--compact{% endif %}">
+    {% unless compact %}
+    <h3 class="subscribe-form__title">Get new posts by email</h3>
+    <p class="subscribe-form__blurb">
+        Occasional updates on ML for genomics, papers, and side projects. No spam.
+    </p>
+    {% endunless %}
+
+    <form action="https://buttondown.com/api/emails/embed-subscribe/philfradkin"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/philfradkin', 'popupwindow')"
+        class="subscribe-form__row">
+        <label for="bd-email-{% if compact %}compact{% else %}full{% endif %}" class="visually-hidden">Email</label>
+        <input id="bd-email-{% if compact %}compact{% else %}full{% endif %}" type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</div>

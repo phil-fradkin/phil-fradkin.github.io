@@ -6,16 +6,33 @@ description: "Personal website of Philip Fradkin, a PhD student at the Universit
 
 ## About me:
 
-I’m a PhD student at the university of Toronto working to create advances at the intersection of machine learning and genomics. I am passionate about the subject because the consequences of discovery are so significant - biology is all around us and yet we understand so little of it.
+I'm a cofounder at [BlankBio](https://blank.bio) working to build RNA foundation models at the intersection of machine learning and biology. I am passionate about the field because the consequences of discovery are significant. Biology is all around us, yet we understand so little of it.
 
-Prior to starting my PhD I worked as a computational biologist at
-Deep Genomics where I worked on translating foundational research in machine learning and genomics into pre-clinical applications.
+Prior to starting BlankBio I did my PhD at the University of Toronto, working on self-supervised learning for biological sequences. Before that I worked as a computational biologist at Deep Genomics, where I translated foundational research in machine learning and genomics into pre-clinical applications.
 
-My PhD projects are in the areas of self-supervised contrastive training, and data efficient learning for biological sequences. I am broadly curious and would love to discuss new and ongoing projects.
-
+My interests are in RNA biology and therapeutics, representation learning for biological sequences, and how to make AI tools useful for scientists. I am broadly curious and would love to discuss new and ongoing projects.
 
 --- 
 --- 
+
+<h2 id="writing">Writing</h2>
+
+<div class="writing-list">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="writing-entry">
+        <div class="writing-date">{{ post.date | date: "%b %Y" }}</div>
+        <div class="writing-content">
+            <h3 class="writing-title">{{ post.title }}</h3>
+            {% if post.description %}
+            <p class="writing-excerpt">{{ post.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+---
+---
 
 <h2 id="timeline">Research Timeline</h2>
 
